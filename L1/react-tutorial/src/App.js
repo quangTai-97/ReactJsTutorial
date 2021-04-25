@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Table from './Table';
 import Form from './Form'
-
+import Home from './pages/home'
 
 class App extends Component{
   state = {

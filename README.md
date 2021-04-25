@@ -5,4 +5,4 @@ Cơ bản reactjs từ reactjs.org
 npm install -g create-react-app
 
 # create react project
-npx create-reactap --NameProject
+npx create-react-app --NameProject
