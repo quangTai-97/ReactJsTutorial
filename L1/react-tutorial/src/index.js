@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import AppApi from './Api'
 import Home from './pages/home'
 
-ReactDOM.render(<Home />,  document.getElementById('root'))
+ReactDOM.render(<AppApi />,  document.getElementById('root'))
 
 reportWebVitals();
 

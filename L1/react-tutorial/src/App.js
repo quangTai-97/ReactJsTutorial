@@ -2,8 +2,9 @@ import React,{ Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Table from './Table';
-import Form from './Form'
-import Home from './pages/home'
+import Form from './Form';
+import Home from './pages/home';
+import cryptoRandomString from 'crypto-random-string';
 
 class App extends Component{
   state = {
