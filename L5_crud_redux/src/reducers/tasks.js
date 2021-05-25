@@ -25,6 +25,7 @@ var myReducer = (state = inittialState, action) => {
       state.push(newTask);
       localStorage.setItem("tasks", JSON.stringify(state));
       return [...state];
+    
     default:
       return state;
   }
