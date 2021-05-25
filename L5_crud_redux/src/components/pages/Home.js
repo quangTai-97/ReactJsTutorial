@@ -8,36 +8,6 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: [
-        {
-          id: this.generateId(),
-          name: "Đỗ Quang Tài",
-          address: "Bắc Ninh",
-          email: "dqtai97@gmail.com",
-          status: true,
-        },
-        {
-          id: this.generateId(),
-          name: "Đỗ Quang Quân",
-          address: "Bắc Ninh",
-          email: "dqtai97@gmail.com",
-          status: true,
-        },
-        {
-          id: this.generateId(),
-          name: "Đỗ Quang Tú",
-          address: "Bắc Ninh",
-          email: "dqtai97@gmail.com",
-          status: true,
-        },
-        {
-          id: this.generateId(),
-          name: "Đỗ Quang Tỉnh",
-          address: "Bắc Ninh",
-          email: "dqtai97@gmail.com",
-          status: false,
-        },
-      ],
       isDisplayFrom: false,
       taskEditing: null,
       filter: {
@@ -46,15 +16,6 @@ class Home extends Component {
       },
       keyword: "",
     };
-  }
-  //WARNING! To be deprecated in React v17. Use componentDidMount instead.
-  componentWillMount() {
-    if (localStorage && localStorage.getItem("tasks")) {
-      var tasks = JSON.parse(localStorage.getItem("tasks"));
-      this.setState({
-        tasks: tasks,
-      });
-    }
   }
 
   onToggleForm = () => {
@@ -182,32 +143,30 @@ class Home extends Component {
     });
   };
   render() {
-    var { tasks, isDisplayFrom, taskEditing, filter, keyword } = this.state;
-    if (filter) {
-      if (filter.filterName) {
-        tasks = tasks.filter((task) => {
-          return task.name.toLowerCase().indexOf(filter.filterName) !== -1;
-        });
-      }
+    var { isDisplayFrom, taskEditing, filter, keyword } = this.state;
+    // if (filter) {
+    //   if (filter.filterName) {
+    //     tasks = tasks.filter((task) => {
+    //       return task.name.toLowerCase().indexOf(filter.filterName) !== -1;
+    //     });
+    //   }
 
-      tasks = tasks.filter((task) => {
-        if (filter.filterStatus === -1) {
-          console.log("data -1 " + filter.filterStatus);
-          return task;
-        } else {
-          console.log("data orther" + filter.filterStatus);
-          return task.status === (filter.filterStatus === 1 ? true : false);
-        }
-      });
-    }
-    if (keyword) {
-      tasks = _.filter(tasks, (task) => {
-        return task.name === keyword;
-      });
-      //    tasks.filter((task) => {
-      //     return task.name.toLowerCase().indexOf(keyword) !== -1;
-      //   });
-    }
+    //   tasks = tasks.filter((task) => {
+    //     if (filter.filterStatus === -1) {
+    //       console.log("data -1 " + filter.filterStatus);
+    //       return task;
+    //     } else {
+    //       console.log("data orther" + filter.filterStatus);
+    //       return task.status === (filter.filterStatus === 1 ? true : false);
+    //     }
+    //   });
+    // }
+    // if (keyword) {
+    //   tasks = _.filter(tasks, (task) => {
+    //     return task.name === keyword;
+    //   });
+
+    // }
     var elmTaskForm = isDisplayFrom ? (
       <TaskForm
         onCloseForm={this.onCloseForm}
@@ -257,7 +216,7 @@ class Home extends Component {
             {/* Table */}
             <div>
               <Table
-                tasks={tasks}
+                //  tasks={tasks}
                 onUpdateStatus={this.onUpdateStatus}
                 onDelete={this.onDelete}
                 onUpdate={this.onUpdate}

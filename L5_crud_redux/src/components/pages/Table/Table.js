@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TabItem from "./TabItem";
+import { connect } from "react-redux";
 
 class Table extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Table extends Component {
   };
 
   render() {
+    console.log(this.props);
     var { tasks } = this.props;
     var { filterName, filterStatus } = this.state;
     var elmTasks = tasks.map((task, index) => {
@@ -85,4 +87,9 @@ class Table extends Component {
   }
 }
 
-export default Table;
+const mapStateToProps = (state) => {
+  return {
+    tasks: state.tasks, //lấy từ reducers index.js
+  };
+};
+export default connect(mapStateToProps, null)(Table);
