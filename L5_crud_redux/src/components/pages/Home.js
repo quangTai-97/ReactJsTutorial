@@ -4,11 +4,12 @@ import TaskForm from "./Form/TaskForm";
 import cryptoRandomString from "crypto-random-string";
 import Search from "./Table/Search";
 import _ from "lodash";
+import * as actions from './../../actions/index';
+import {connect} from 'react-redux';
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDisplayFrom: false,
       taskEditing: null,
       filter: {
         filterName: "",
@@ -19,18 +20,20 @@ class Home extends Component {
   }
 
   onToggleForm = () => {
+    console.log('this.props', this.props);
+    this.props.onToggleform();
     //thêm task
-    if (this.state.isDisplayFrom && this.state.taskEditing !== null) {
-      this.setState({
-        isDisplayFrom: true,
-        taskEditing: null,
-      });
-    } else {
-      this.setState({
-        isDisplayFrom: !this.state.isDisplayFrom,
-        taskEditing: null,
-      });
-    }
+    // if (this.state.isDisplayFrom && this.state.taskEditing !== null) {
+    //   this.setState({
+    //     isDisplayFrom: true,
+    //     taskEditing: null,
+    //   });
+    // } else {
+    //   this.setState({
+    //     isDisplayFrom: !this.state.isDisplayFrom,
+    //     taskEditing: null,
+    //   });
+    // }
   };
 
   onCloseForm = () => {
@@ -38,15 +41,15 @@ class Home extends Component {
       isDisplayFrom: false,
     });
   };
-  handleSumbit = (data) => {
-    var { tasks } = this.state;
-    data.id = this.generateId();
-    tasks.push(data);
-    this.setState({
-      tasks: tasks,
-    });
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  };
+  // handleSumbit = (data) => {
+  //   var { tasks } = this.state;
+  //   data.id = this.generateId();
+  //   tasks.push(data);
+  //   this.setState({
+  //     tasks: tasks,
+  //   });
+  //   localStorage.setItem("tasks", JSON.stringify(tasks));
+  // };
 
   generateId = () => {
     var id = cryptoRandomString({ length: 10, type: "numeric" });
@@ -143,7 +146,10 @@ class Home extends Component {
     });
   };
   render() {
-    var { isDisplayFrom, taskEditing, filter, keyword } = this.state;
+    var {  taskEditing, filter, keyword } = this.state;
+    var {isDisplayForm} = this.props;
+
+    
     // if (filter) {
     //   if (filter.filterName) {
     //     tasks = tasks.filter((task) => {
@@ -167,10 +173,10 @@ class Home extends Component {
     //   });
 
     // }
-    var elmTaskForm = isDisplayFrom ? (
+    var elmTaskForm = isDisplayForm === true ? (
       <TaskForm
         onCloseForm={this.onCloseForm}
-        handleSumbit={this.handleSumbit}
+       // handleSumbit={this.handleSumbit}
         task={taskEditing}
         onUpdatedata={this.onUpdateData}
       />
@@ -185,14 +191,14 @@ class Home extends Component {
         <div className="row">
           <div
             className={
-              isDisplayFrom ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : ""
+              isDisplayForm === true ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : ""
             }
           >
             {elmTaskForm}
           </div>
           <div
             className={
-              isDisplayFrom
+              isDisplayForm === true
                 ? "col-xs-8 col-sm-8 col-md-8 col-lg-8"
                 : "col-xs-12 col-sm-12 col-md-12 col-lg-12"
             }
@@ -230,4 +236,20 @@ class Home extends Component {
   }
 }
 
-export default Home;
+ const mapStateToProps = (state) => {
+   console.log('state mapStateToProps',state);
+  return {
+    //state của store;
+    isDisplayForm : state.isDisplayForm
+  }
+}
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onToggleform:() =>{
+
+      dispatch(actions.toggleForm());
+    },
+    
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Home);
