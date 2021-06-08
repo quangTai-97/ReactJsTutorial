@@ -15,7 +15,7 @@ chatMenuInput:focus {
   outline-style: none;
 }
 .chatBox {
-  flex: 3.5;
+  flex: 5.5;
 }
 
 .chatBoxBottom {
@@ -63,5 +63,9 @@ chatMenuInput:focus {
 }
 
 .noConversationText {
-  position: absolute;
+  /* position: absolute; */
+  top: 10%;
+  font-size: 50px;
+  color: rgb(224, 220, 220);
+  cursor: default;
 }
