@@ -12,6 +12,7 @@ export default function ChatOnline({ onlineUsers, currentId, setcurrentChat }) {
     const getFriends = async () => {
       const res = await axios.get("/users/friends/" + currentId);
       setFriends(res.data);
+      console.log("friendList", res.data);
     };
     getFriends();
   }, [currentId]);

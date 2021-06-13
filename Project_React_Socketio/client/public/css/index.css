@@ -1,0 +1,409 @@
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirNext-DemiBold";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Demi.otf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-Medium";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-untralight";
+  src: url("font/Avenir_Next/AvenirNextLTPro-UltLt.otf") format("truetype");
+}
+/* ========================MENU============================================== */
+
+#menu {
+  position: absolute;
+  width: 101px;
+  height: 1024px;
+  top: 0px;
+  overflow: visible;
+}
+.Rectangle_b {
+  filter: drop-shadow(0px 2px 40px rgba(16, 27, 79, 0.2));
+  position: absolute;
+  overflow: visible;
+  width: 221px;
+  height: 1144px;
+  left: 0px;
+  top: 0px;
+}
+#Rectangle_b {
+  fill: rgba(255, 255, 255, 1);
+}
+#L {
+  opacity: 0.2;
+  left: 2.5rem;
+  position: absolute;
+  overflow: visible;
+  width: 15px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: AvenirNext-DemiBold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgba(77, 104, 193, 1);
+}
+#Offers {
+  left: 0px;
+  top: 70px;
+  position: absolute;
+  overflow: visible;
+  width: 6rem;
+  white-space: nowrap;
+  text-align: center;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Page_1 {
+  position: absolute;
+  width: 34.256px;
+  height: 29.48px;
+  left: 2rem;
+  top: 16.609px;
+  overflow: visible;
+}
+#Fill_1_cf {
+  /* fill: rgba(255, 255, 255, 1); */
+  opacity: 0.7;
+  fill: rgba(16, 27, 79, 0.51);
+}
+.Fill_1_cf {
+  overflow: visible;
+  position: absolute;
+  width: 34.256px;
+  height: 29.48px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Fill_4 {
+  fill: rgba(237, 239, 248, 1);
+}
+.Fill_4 {
+  overflow: visible;
+  position: absolute;
+  width: 3.766px;
+  height: 3.729px;
+  left: 7.322px;
+  top: 9.845px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Fill_6 {
+  fill: rgba(237, 239, 248, 1);
+}
+.Fill_6 {
+  overflow: visible;
+  position: absolute;
+  width: 3.766px;
+  height: 3.729px;
+  left: 15.245px;
+  top: 9.845px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Fill_8 {
+  fill: rgba(237, 239, 248, 1);
+  /* fill: rgba(77, 104, 193, 1); */
+}
+.Fill_8 {
+  overflow: visible;
+  position: absolute;
+  width: 3.766px;
+  height: 3.729px;
+  left: 23.168px;
+  top: 9.845px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Oval_cm {
+  opacity: 0.7;
+  fill: rgba(16, 27, 79, 0.51);
+}
+.Oval_cm {
+  position: absolute;
+  overflow: visible;
+  width: 34.34px;
+  height: 34px;
+  left: 31.546px;
+  top: 13px;
+}
+
+#Page_1_co {
+  position: absolute;
+  width: 18.064px;
+  height: 14.681px;
+  left: 39.627px;
+  top: 22.904px;
+  overflow: visible;
+}
+#Fill_4_cp {
+  fill: rgba(237, 239, 248, 1);
+}
+.Fill_4_cp {
+  overflow: visible;
+  position: absolute;
+  width: 18.064px;
+  height: 14.681px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.navbarSup {
+  margin-top: 5.7rem;
+}
+.navbarSup2 {
+  margin-top: 4.2rem;
+}
+.navbarHeader {
+  margin-top: 1.5rem;
+}
+#Rectangle {
+  opacity: 0.1;
+  fill: rgba(77, 104, 193, 1);
+
+  width: 60.6px;
+  height: 60px;
+}
+.Rectangle {
+  position: absolute;
+  /* overflow: visible; */
+  width: 60.6px;
+  height: 60px;
+  left: 1.15rem;
+  top: 0px;
+  border-radius: 9px;
+}
+.navbar a:hover .Rectangle #Rectangle {
+  opacity: 1;
+  fill: #1fca74;
+}
+.navbar a:hover .Combined_Shape #Combined_Shape {
+  opacity: 1;
+  fill: #fff;
+}
+.navbar a:hover #L {
+  opacity: 1;
+  color: #fff;
+}
+#Combined_Shape {
+  opacity: 0.7;
+  fill: rgba(16, 27, 79, 0.51);
+}
+.Combined_Shape {
+  overflow: visible;
+  position: absolute;
+  width: 34.14px;
+  height: 32.81px;
+  left: 32.157px;
+  top: 13.109px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.activeShape .Rectangle #Rectangle {
+  opacity: 1;
+  fill: #1fca74;
+}
+.activeShape .Combined_Shape #Combined_Shape {
+  opacity: 1;
+  fill: #fff;
+}
+.activeShape #Page_1 .Fill_1_cf #Fill_1_cf {
+  opacity: 1;
+  fill: #fff;
+}
+.activeShape #Page_1 .Fill_4 #Fill_4 {
+  fill: rgba(77, 104, 193, 1);
+}
+.activeShape #Page_1 .Fill_6 #Fill_6 {
+  fill: rgba(77, 104, 193, 1);
+}
+.activeShape #Page_1 .Fill_8 #Fill_8 {
+  fill: rgba(77, 104, 193, 1);
+}
+.activeShape .Oval_cm #Oval_cm {
+  opacity: 1;
+  fill: #fff;
+}
+.activeShape #Page_1_co .Fill_4_cp #Fill_4_cp {
+  fill: #1fca74;
+}
+.activeShape #L {
+  opacity: 1;
+  color: #fff;
+}
+.activeIcon {
+  opacity: 1;
+  fill: #fff;
+}
+
+/* ========================TAPNAV============================================== */
+#tap_nav {
+  position: absolute;
+  top: 0px;
+  overflow: visible;
+  background-color: #1fca74;
+  width: 100%;
+  height: 100px;
+}
+
+#Oval_Copy_2_by {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 42em;
+  top: 30px;
+  overflow: visible;
+}
+
+.line {
+  overflow: visible;
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  opacity: 0.2;
+  fill: transparent;
+  background: rgba(16, 76, 45, 1);
+}
+/* ========================expertise_============================================== */
+#expertise_ {
+  position: absolute;
+  width: 305px;
+  height: 100px;
+  left: 57em;
+  top: 0px;
+  overflow: visible;
+  background: rgba(9, 132, 70, 1);
+}
+
+#footer {
+  position: absolute;
+  width: 1440px;
+  height: 30px;
+  left: 0px;
+  top: 994px;
+  overflow: visible;
+}
+#Rectangle_8 {
+  fill: rgba(91, 96, 117, 1);
+}
+.Rectangle_8 {
+  position: absolute;
+  overflow: visible;
+  width: 1440px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+}
+#Our_story_Partnershi {
+  opacity: 0.5;
+  left: 959px;
+  top: 7px;
+  position: absolute;
+  overflow: visible;
+  width: 442px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#Oval_4 {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4 {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1020px;
+  top: 14px;
+}
+#Oval_4_Copy {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4_Copy {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1121.471px;
+  top: 14px;
+}
+#Oval_4_Copy_2 {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4_Copy_2 {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1188.374px;
+  top: 14px;
+}
+#Oval_4_Copy_3 {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4_Copy_3 {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1294.151px;
+  top: 14px;
+}
+#lang {
+  position: absolute;
+  width: 54.653px;
+  height: 16px;
+  left: 161px;
+  top: 7px;
+  overflow: visible;
+}
+#English {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 39px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#Triangle {
+  fill: rgba(255, 255, 255, 1);
+}
+.Triangle {
+  overflow: visible;
+  position: absolute;
+  width: 6.401px;
+  height: 4.916px;
+  transform: translate(0px, 0px) matrix(1, 0, 0, 1, 48.2522, 5.4763)
+    rotate(180deg);
+  transform-origin: center;
+  left: 0px;
+  top: 0px;
+}

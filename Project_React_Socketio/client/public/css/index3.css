@@ -1,0 +1,1679 @@
+/* ========================MENU============================================== */
+
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirNext-DemiBold";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Demi.otf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-Medium";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("font/Avenir_Next/AvenirNextLTPro-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-untralight";
+  src: url("font/Avenir_Next/AvenirNextLTPro-UltLt.otf") format("truetype");
+}
+
+.mediaViewInfo {
+  --web-view-name: chat copy;
+  --web-view-id: chat_copy;
+  --web-scale-on-resize: true;
+  --web-enable-deep-linking: true;
+}
+:root {
+  --web-view-ids: chat_copy;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+#chat_copy {
+  position: absolute;
+  width: 90em;
+  height: 64em;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  --web-view-name: chat copy;
+  --web-view-id: chat_copy;
+  --web-scale-on-resize: true;
+  --web-enable-deep-linking: true;
+}
+#Rectangle_2 {
+  opacity: 0.1;
+  fill: rgba(77, 104, 193, 1);
+}
+.Rectangle_2 {
+  position: absolute;
+  overflow: visible;
+  width: 90em;
+  height: 64em;
+  left: 0px;
+  top: 0px;
+}
+
+#messeges {
+  position: absolute;
+  left: 11.2%;
+  top: 20%;
+  overflow: visible;
+}
+#message {
+  position: absolute;
+  width: 779.441px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#ID0744_am {
+  left: 723.441px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 57px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(155, 155, 155, 1);
+}
+#Rectangle_5 {
+  fill: rgba(31, 202, 116, 1);
+}
+.Rectangle_5 {
+  overflow: visible;
+  position: absolute;
+  width: 639.298px;
+  height: 100px;
+  left: 58.81px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Now_if_you_are_inte {
+  left: 83.597px;
+  top: 15px;
+  position: absolute;
+  overflow: visible;
+  width: 586.598px;
+  height: 80px;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+#Oval {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#message2 {
+  position: absolute;
+  width: 328.399px;
+  height: 50px;
+  left: 597.411px;
+  top: 150px;
+  overflow: visible;
+}
+#ID0843_am {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 57px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(155, 155, 155, 1);
+}
+#Rectangle_5_Copy_2 {
+  width: 185.399px;
+  height: 50px;
+  fill: rgba(120, 137, 152, 1);
+}
+.Rectangle_5_Copy_2 {
+  position: absolute;
+  /* overflow: visible; */
+  width: 185.399px;
+  height: 50px;
+  left: 82.399px;
+  top: 0px;
+  border-radius: 10px 0px 10px 10px;
+}
+#Some_message_text {
+  left: 113.399px;
+  top: 13.792px;
+  position: absolute;
+  overflow: visible;
+  width: 138px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+#Oval_Copy_2 {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 288.399px;
+  top: 0px;
+  overflow: visible;
+}
+#message_3 {
+  position: absolute;
+  width: 452.396px;
+  height: 50px;
+  left: 0px;
+  top: 254px;
+  overflow: visible;
+}
+#ID0843_am_v {
+  left: 396.396px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 57px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(155, 155, 155, 1);
+}
+#Rectangle_5_Copy {
+  fill: rgba(31, 202, 116, 1);
+}
+.Rectangle_5_Copy {
+  position: absolute;
+  overflow: visible;
+  width: 317px;
+  height: 50px;
+  left: 58.81px;
+  top: 0px;
+}
+#Become_A_Travel_Pro {
+  left: 83.597px;
+  top: 13px;
+  position: absolute;
+  overflow: visible;
+  width: 275.982px;
+  height: 31.696979522705078px;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+#Oval_Copy {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#message_3_copy {
+  position: absolute;
+  width: 158.443px;
+  height: 50px;
+  left: 0px;
+  top: 332.5px;
+  overflow: visible;
+}
+#Rectangle_5_Copy_ {
+  opacity: 0.1;
+  fill: rgba(31, 202, 116, 1);
+}
+.Rectangle_5_Copy_ {
+  position: absolute;
+  overflow: visible;
+  width: 99.632px;
+  height: 50px;
+  left: 58.81px;
+  top: 0px;
+}
+#Combined_Shape {
+  fill: rgba(31, 202, 116, 1);
+}
+.Combined_Shape {
+  overflow: visible;
+  position: absolute;
+  width: 41.826px;
+  height: 14px;
+  left: 87.714px;
+  top: 17.715px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Oval_Copy_ {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#input {
+  position: absolute;
+  left: 15%;
+  top: 84%;
+  overflow: visible;
+}
+.input {
+  position: absolute;
+  width: 50em;
+  height: 3.2em;
+  border-radius: 10px;
+  padding-left: 2em;
+}
+.input:focus {
+  outline-style: none;
+}
+
+#Fill_1 {
+  fill: rgba(77, 104, 193, 1);
+}
+.Fill_1 {
+  overflow: visible;
+  position: absolute;
+  width: 18.518px;
+  height: 19.367px;
+  left: 764.304px;
+  top: 17.264px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Oval_Copy_2_ {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 828.288px;
+  top: 7px;
+  overflow: visible;
+}
+#footer {
+  position: absolute;
+
+  left: 0px;
+  top: 97%;
+  overflow: visible;
+}
+#Rectangle_8 {
+  fill: rgba(91, 96, 117, 1);
+}
+.Rectangle_8 {
+  position: absolute;
+  overflow: visible;
+  /* width: 1440px;
+  height: 30px; */
+  left: 0px;
+  top: 0px;
+}
+#Our_story_Partnershi {
+  opacity: 0.5;
+  /* left: 959px; */
+  top: 7px;
+  position: absolute;
+  overflow: visible;
+  /* width: 442px; */
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#Our_story_Partnershi a {
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 77em;
+}
+.footerPart1 {
+  margin-left: 3em;
+}
+.footerPart2 {
+  margin-left: 9.5em;
+}
+.footerPart3 {
+  margin-left: 17.5em;
+}
+.footerPart4 {
+  margin-left: 23.5em;
+}
+.footerPart5 {
+  margin-left: 32.5em;
+}
+#Our_story_Partnershi a:hover {
+  text-decoration-line: none;
+}
+#Oval_4 {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4 {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1020px;
+  top: 14px;
+}
+#Oval_4_Copy {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4_Copy {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1121.471px;
+  top: 14px;
+}
+#Oval_4_Copy_2 {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4_Copy_2 {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1188.374px;
+  top: 14px;
+}
+#Oval_4_Copy_3 {
+  opacity: 0.5;
+  fill: rgba(255, 255, 255, 1);
+}
+.Oval_4_Copy_3 {
+  position: absolute;
+  overflow: visible;
+  width: 4px;
+  height: 4px;
+  left: 1294.151px;
+  top: 14px;
+}
+#lang {
+  position: absolute;
+  width: 54.653px;
+  height: 16px;
+  left: 161px;
+  top: 7px;
+  overflow: visible;
+}
+#English {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 39px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#Triangle {
+  fill: rgba(255, 255, 255, 1);
+}
+.Triangle {
+  overflow: visible;
+  position: absolute;
+  width: 6.401px;
+  height: 4.916px;
+  transform: translate(0px, 0px) matrix(1, 0, 0, 1, 48.2522, 5.4763)
+    rotate(180deg);
+  transform-origin: center;
+  left: 0px;
+  top: 0px;
+}
+#header {
+  position: absolute;
+  left: 7%;
+  top: 10%;
+  overflow: visible;
+}
+#Rectangle {
+  fill: rgba(255, 255, 255, 1);
+}
+.Rectangle {
+  position: absolute;
+  overflow: visible;
+  /* width: 1036px;
+  height: 80px; */
+  left: 0px;
+  top: 0px;
+}
+#item_copy_2 {
+  position: absolute;
+  width: 627.123px;
+  height: 40px;
+  left: 5em;
+  top: 1.35em;
+  overflow: visible;
+}
+#Oval_bl {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Offer {
+  left: 558.149px;
+  top: 2.263px;
+  position: absolute;
+  overflow: visible;
+  width: 28px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Company {
+  left: 396.026px;
+  top: 2.263px;
+  position: absolute;
+  overflow: visible;
+  width: 52px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Hilda_Hansen {
+  left: 58.237px;
+  top: 8.318px;
+  position: absolute;
+  overflow: visible;
+  width: 107px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(16, 27, 79, 1);
+}
+#Advertising {
+  left: 557.123px;
+  top: 18.737px;
+  position: absolute;
+  overflow: visible;
+  width: 71px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+#Invision {
+  left: 395px;
+  top: 18.737px;
+  position: absolute;
+  overflow: visible;
+  width: 48px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+#Fill_1_br {
+  opacity: 0.3;
+  fill: rgba(16, 27, 79, 1);
+}
+.Fill_1_br {
+  overflow: visible;
+  position: absolute;
+  width: 15.238px;
+  height: 16px;
+  left: 284.256px;
+  top: 12px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Combined_Shape_bs {
+  opacity: 0.3;
+  fill: rgba(16, 27, 79, 1);
+}
+.Combined_Shape_bs {
+  overflow: visible;
+  position: absolute;
+  width: 16.549px;
+  height: 12.681px;
+  left: 325.707px;
+  top: 13.659px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#close {
+  position: absolute;
+  /* width: 26px;
+  height: 26px; */
+  left: 62em;
+  top: 1.6em;
+  overflow: visible;
+}
+#Oval_2 {
+  fill: transparent;
+  stroke: rgba(155, 155, 155, 1);
+  stroke-width: 2px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Oval_2 {
+  position: absolute;
+  overflow: visible;
+  width: 28px;
+  height: 28px;
+  left: 0px;
+  top: 0px;
+}
+#Combined_Shape_bv {
+  fill: rgba(155, 155, 155, 1);
+}
+.Combined_Shape_bv {
+  overflow: visible;
+  position: absolute;
+  width: 11.859px;
+  height: 11.859px;
+  transform: translate(0px, 0px) matrix(1, 0, 0, 1, 7.0703, 7.0702)
+    rotate(45deg);
+  transform-origin: center;
+  left: 0px;
+  top: 0px;
+}
+#tap_nav {
+  position: absolute;
+  width: 90em;
+  height: 10em;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Rectangle_3 {
+  fill: rgba(31, 202, 116, 1);
+}
+.Rectangle_3 {
+  position: absolute;
+  overflow: visible;
+  width: 90em;
+  height: 10em;
+  left: 0px;
+  top: 0px;
+}
+#Oval_Copy_2_by {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 906px;
+  top: 30px;
+  overflow: visible;
+}
+#Lottie_Oliver {
+  left: 966px;
+  top: 37.5px;
+  position: absolute;
+  overflow: visible;
+  width: 98px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+#Homepage {
+  left: 749px;
+  top: 37.5px;
+  position: absolute;
+  overflow: visible;
+  width: 89px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+#Combined_Shape_Copy {
+  fill: rgba(16, 76, 45, 1);
+}
+.Combined_Shape_Copy {
+  overflow: visible;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: translate(0px, 0px) matrix(1, 0, 0, 1, 1102.0711, 43.9289)
+    rotate(-45deg);
+  transform-origin: center;
+  left: 0px;
+  top: 0px;
+}
+#Line {
+  opacity: 0.2;
+  fill: transparent;
+  stroke: rgba(16, 76, 45, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Line {
+  overflow: visible;
+  position: absolute;
+  width: 1px;
+  height: 40.459px;
+  left: 874.5px;
+  top: 29.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* ============================listmesseges============================ */
+
+#listmesseges {
+  position: absolute;
+  width: 19em;
+  height: 56em;
+  left: 71em;
+  top: 6em;
+  overflow: visible;
+}
+#listmesseges_background {
+  fill: transparent;
+}
+.listmesseges_background {
+  position: absolute;
+  overflow: visible;
+  width: 19em;
+  height: 56em;
+  left: 0px;
+  top: 0px;
+}
+#Rectangle_3_c {
+  opacity: 0.05;
+  fill: rgba(16, 27, 79, 1);
+}
+.Rectangle_3_c {
+  position: absolute;
+  overflow: visible;
+  width: 19em;
+  height: 56em;
+  left: 0px;
+  top: 0px;
+}
+#search {
+  position: absolute;
+  width: 266.067px;
+  height: 40px;
+  left: 20.467px;
+  top: 20px;
+  overflow: visible;
+}
+.inputSearch {
+  width: 266.067px;
+  height: 40px;
+  opacity: 0.5;
+  border-radius: 10px;
+  padding-left: 2.5em;
+}
+.inputSearch:focus {
+  outline-style: none;
+
+  opacity: 1;
+}
+.inputSearch::placeholder {
+  fill: rgba(16, 27, 79, 1);
+  padding-left: 2.5em;
+}
+#Rectangle_2_c {
+  opacity: 0.05;
+  fill: rgba(16, 27, 79, 1);
+}
+.Rectangle_2_c {
+  position: absolute;
+  overflow: visible;
+  width: 266.067px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+}
+#Fill_1_c {
+  fill: rgba(16, 27, 79, 1);
+}
+.Fill_1_c {
+  overflow: visible;
+  position: absolute;
+  width: 11.214px;
+  height: 10.959px;
+  left: 14.278px;
+  top: 15.521px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#item {
+  position: absolute;
+  width: 266.067px;
+  height: 102.5px;
+  left: 20.467px;
+  top: 81px;
+  overflow: visible;
+}
+#Oval_c {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40.933px;
+  height: 40px;
+  left: 0px;
+  top: 22px;
+  overflow: visible;
+}
+#Adobe {
+  left: 53.922px;
+  top: 39px;
+  position: absolute;
+  overflow: visible;
+  width: 37px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Three_Ways_To_Get_Tr {
+  left: 53.213px;
+  top: 65px;
+  position: absolute;
+  overflow: visible;
+  width: 211px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Line_dc {
+  opacity: 0.1;
+  fill: transparent;
+  stroke: rgba(16, 27, 79, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Line_dc {
+  overflow: visible;
+  position: absolute;
+  width: 267.067px;
+  height: 1px;
+  left: 0px;
+  top: 102.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Line_Copy_dd {
+  opacity: 0.1;
+  fill: transparent;
+  stroke: rgba(16, 27, 79, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Line_Copy_dd {
+  overflow: visible;
+  position: absolute;
+  width: 267.067px;
+  height: 1px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Ricardo_Lopez {
+  left: 53.823px;
+  top: 21px;
+  position: absolute;
+  overflow: visible;
+  width: 88px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+#ID1123_am {
+  opacity: 0.4;
+  left: 218.067px;
+  top: 23px;
+  position: absolute;
+  overflow: visible;
+  width: 49px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(16, 27, 79, 1);
+}
+#item_copy {
+  position: absolute;
+  width: 266.067px;
+  height: 60px;
+  left: 20.467px;
+  top: 205px;
+  overflow: visible;
+}
+#Oval_dh {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40.933px;
+  height: 40px;
+  left: 0px;
+  top: 1px;
+  overflow: visible;
+}
+#Apple {
+  left: 53.378px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 32px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Train_Travel_On_Trac {
+  left: 53.213px;
+  top: 44px;
+  position: absolute;
+  overflow: visible;
+  width: 211px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Frederick_Byrd {
+  left: 53.834px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 89px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+#ID1011_am {
+  opacity: 0.4;
+  left: 218.067px;
+  top: 2px;
+  position: absolute;
+  overflow: visible;
+  width: 49px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(16, 27, 79, 1);
+}
+#item_copy_2_dm {
+  position: absolute;
+  width: 286.533px;
+  height: 103px;
+  left: 10.233px;
+  top: 287px;
+  overflow: visible;
+}
+#Rectangle_2_dn {
+  fill: rgba(31, 202, 116, 1);
+}
+.Rectangle_2_dn {
+  filter: drop-shadow(0px 5px 15px rgba(16, 27, 79, 0.149));
+  position: absolute;
+  overflow: visible;
+  width: 331.533px;
+  height: 148px;
+  left: 0px;
+  top: 0px;
+}
+#Oval_do {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40.933px;
+  height: 40px;
+  left: 10.233px;
+  top: 22px;
+  overflow: visible;
+}
+#Invision_dp {
+  left: 63.688px;
+  top: 39px;
+  position: absolute;
+  overflow: visible;
+  width: 41px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#Become_A_Travel_Pro_dq {
+  left: 63.447px;
+  top: 65px;
+  position: absolute;
+  overflow: visible;
+  width: 211px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#Hilda_Hansen_dr {
+  left: 64.046px;
+  top: 21px;
+  position: absolute;
+  overflow: visible;
+  width: 83px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+}
+#ID0843_am_ds {
+  left: 228.252px;
+  top: 23px;
+  position: absolute;
+  overflow: visible;
+  width: 49px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#item_copy_3 {
+  position: absolute;
+  width: 266.067px;
+  height: 81.5px;
+  left: 20.467px;
+  top: 411px;
+  overflow: visible;
+}
+#Oval_du {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40.933px;
+  height: 40px;
+  left: 0px;
+  top: 1px;
+  overflow: visible;
+}
+#Avocode {
+  left: 53.474px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 47px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#How_To_Maintain_Your {
+  left: 53.213px;
+  top: 44px;
+  position: absolute;
+  overflow: visible;
+  width: 211px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Line_dx {
+  opacity: 0.1;
+  fill: transparent;
+  stroke: rgba(16, 27, 79, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Line_dx {
+  overflow: visible;
+  position: absolute;
+  width: 267.067px;
+  height: 1px;
+  left: 0px;
+  top: 81.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Ryan_Underwood {
+  left: 54.062px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 108px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+#ID711_am {
+  opacity: 0.4;
+  left: 224.067px;
+  top: 2px;
+  position: absolute;
+  overflow: visible;
+  width: 43px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(16, 27, 79, 1);
+}
+#item_copy_4 {
+  position: absolute;
+  width: 266.067px;
+  height: 81.5px;
+  left: 20.467px;
+  top: 514px;
+  overflow: visible;
+}
+#Oval_d {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40.933px;
+  height: 40px;
+  left: 0px;
+  top: 1px;
+  overflow: visible;
+}
+#Audi {
+  left: 53.342px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 26px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Get_Ready_Fast_For_F {
+  left: 53.213px;
+  top: 44px;
+  position: absolute;
+  overflow: visible;
+  width: 211px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Line_d {
+  opacity: 0.1;
+  fill: transparent;
+  stroke: rgba(16, 27, 79, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Line_d {
+  overflow: visible;
+  position: absolute;
+  width: 267.067px;
+  height: 1px;
+  left: 0px;
+  top: 81.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Myrtie_Diaz {
+  left: 53.66px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 71px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+#Yesterday {
+  opacity: 0.4;
+  left: 216.067px;
+  top: 2px;
+  position: absolute;
+  overflow: visible;
+  width: 51px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(16, 27, 79, 1);
+}
+#item_copy_5 {
+  position: absolute;
+  width: 266.067px;
+  height: 81.5px;
+  left: 20.467px;
+  top: 617px;
+  overflow: visible;
+}
+#Oval_ea {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  position: absolute;
+  width: 40.933px;
+  height: 40px;
+  left: 0px;
+  top: 1px;
+  overflow: visible;
+}
+#Dell {
+  left: 53.32px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 22px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Three_Ways_To_Get_Tr_ea {
+  left: 53.213px;
+  top: 44px;
+  position: absolute;
+  overflow: visible;
+  width: 211px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Line_eb {
+  opacity: 0.1;
+  fill: transparent;
+  stroke: rgba(16, 27, 79, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Line_eb {
+  overflow: visible;
+  position: absolute;
+  width: 267.067px;
+  height: 1px;
+  left: 0px;
+  top: 81.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Steve_Fowler {
+  left: 53.733px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 79px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+#Yesterday_ed {
+  opacity: 0.4;
+  left: 216.067px;
+  top: 2px;
+  position: absolute;
+  overflow: visible;
+  width: 51px;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(16, 27, 79, 1);
+}
+#search_messages {
+  opacity: 0.5;
+  left: 109.5px;
+  top: 31.844px;
+  position: absolute;
+  overflow: visible;
+  width: 89px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(16, 27, 79, 1);
+}
+#expertise_ {
+  position: absolute;
+  width: 305px;
+  height: 100px;
+  left: 1136px;
+  top: 0px;
+  overflow: visible;
+}
+#Rectangle_3_Copy {
+  fill: rgba(9, 132, 70, 1);
+}
+.Rectangle_3_Copy {
+  position: absolute;
+  overflow: visible;
+  width: 305px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+}
+#ID5_of_expertise {
+  left: 24px;
+  top: 37.482px;
+  position: absolute;
+  overflow: visible;
+  width: 128px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+#you_have {
+  opacity: 0.5;
+  left: 24px;
+  top: 21.482px;
+  position: absolute;
+  overflow: visible;
+  width: 52px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+#Rectangle_6_ej {
+  fill: rgba(16, 76, 45, 1);
+}
+.Rectangle_6_ej {
+  position: absolute;
+  overflow: visible;
+  width: 260px;
+  height: 8px;
+  left: 24px;
+  top: 74px;
+}
+#Rectangle_6_Copy_ek {
+  fill: rgba(31, 202, 116, 1);
+}
+.Rectangle_6_Copy_ek {
+  position: absolute;
+  overflow: visible;
+  width: 13px;
+  height: 8px;
+  left: 24px;
+  top: 74px;
+}
+#Combined_Shape_el {
+  fill: rgba(16, 76, 45, 1);
+}
+.Combined_Shape_el {
+  overflow: visible;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: translate(0px, 0px) matrix(1, 0, 0, 1, 271.0711, 43.9289)
+    rotate(-45deg);
+  transform-origin: center;
+  left: 0px;
+  top: 0px;
+}
+
+/* ==================================MENU NEW================================== */
+
+#menu {
+  position: absolute;
+  width: 101px;
+  height: 1024px;
+  top: 0px;
+  overflow: visible;
+}
+.Rectangle_b {
+  filter: drop-shadow(0px 2px 40px rgba(16, 27, 79, 0.2));
+  position: absolute;
+  overflow: visible;
+  width: 221px;
+  height: 1144px;
+  left: 0px;
+  top: 0px;
+}
+#Rectangle_b {
+  fill: rgba(255, 255, 255, 1);
+}
+#L {
+  opacity: 0.2;
+  left: 2.5rem;
+  position: absolute;
+  overflow: visible;
+  width: 15px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: AvenirNext-DemiBold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: rgba(77, 104, 193, 1);
+}
+#Offers {
+  left: 0px;
+  top: 70px;
+  position: absolute;
+  overflow: visible;
+  width: 6rem;
+  white-space: nowrap;
+  text-align: center;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+}
+#Page_1 {
+  position: absolute;
+  width: 34.256px;
+  height: 29.48px;
+  left: 2rem;
+  top: 16.609px;
+  overflow: visible;
+}
+#Fill_1_cf {
+  /* fill: rgba(255, 255, 255, 1); */
+  opacity: 0.7;
+  fill: rgba(16, 27, 79, 0.51);
+}
+.Fill_1_cf {
+  overflow: visible;
+  position: absolute;
+  width: 34.256px;
+  height: 29.48px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Fill_4 {
+  fill: rgba(237, 239, 248, 1);
+}
+.Fill_4 {
+  overflow: visible;
+  position: absolute;
+  width: 3.766px;
+  height: 3.729px;
+  left: 7.322px;
+  top: 9.845px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Fill_6 {
+  fill: rgba(237, 239, 248, 1);
+}
+.Fill_6 {
+  overflow: visible;
+  position: absolute;
+  width: 3.766px;
+  height: 3.729px;
+  left: 15.245px;
+  top: 9.845px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Fill_8 {
+  fill: rgba(237, 239, 248, 1);
+  /* fill: rgba(77, 104, 193, 1); */
+}
+.Fill_8 {
+  overflow: visible;
+  position: absolute;
+  width: 3.766px;
+  height: 3.729px;
+  left: 23.168px;
+  top: 9.845px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Oval_cm {
+  opacity: 0.7;
+  fill: rgba(16, 27, 79, 0.51);
+}
+.Oval_cm {
+  position: absolute;
+  overflow: visible;
+  width: 34.34px;
+  height: 34px;
+  left: 31.546px;
+  top: 13px;
+}
+
+#Page_1_co {
+  position: absolute;
+  width: 18.064px;
+  height: 14.681px;
+  left: 39.627px;
+  top: 22.904px;
+  overflow: visible;
+}
+#Fill_4_cp {
+  fill: rgba(237, 239, 248, 1);
+}
+.Fill_4_cp {
+  overflow: visible;
+  position: absolute;
+  width: 18.064px;
+  height: 14.681px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.navbarSup {
+  margin-top: 5.7rem;
+}
+.navbarSup2 {
+  margin-top: 4.2rem;
+}
+.navbarHeader {
+  margin-top: 1.5rem;
+}
+#RectangleMenu {
+  opacity: 0.1;
+  fill: rgba(77, 104, 193, 1);
+
+  width: 60.6px;
+  height: 60px;
+}
+.RectangleMenu {
+  position: absolute;
+  /* overflow: visible; */
+  width: 60.6px;
+  height: 60px;
+  left: 1.15rem;
+  top: 0px;
+  border-radius: 9px;
+}
+.navbar a:hover .Rectangle #Rectangle {
+  opacity: 1;
+  fill: #1fca74;
+}
+.navbar a:hover .Combined_Shape #Combined_Shape {
+  opacity: 1;
+  fill: #fff;
+}
+.navbar a:hover #L {
+  opacity: 1;
+  color: #fff;
+}
+#Combined_ShapeMenu {
+  opacity: 0.7;
+  fill: rgba(16, 27, 79, 0.51);
+}
+.Combined_ShapeMenu {
+  overflow: visible;
+  position: absolute;
+  width: 34.14px;
+  height: 32.81px;
+  left: 32.157px;
+  top: 13.109px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.activeShape .RectangleMenu #RectangleMenu {
+  opacity: 1;
+  fill: #1fca74;
+}
+.activeShape .Combined_ShapeMenu #Combined_ShapeMenu {
+  opacity: 1;
+  fill: #fff;
+}
+.activeShape #Page_1 .Fill_1_cf #Fill_1_cf {
+  opacity: 1;
+  fill: #fff;
+}
+.activeShape #Page_1 .Fill_4 #Fill_4 {
+  fill: rgba(77, 104, 193, 1);
+}
+.activeShape #Page_1 .Fill_6 #Fill_6 {
+  fill: rgba(77, 104, 193, 1);
+}
+.activeShape #Page_1 .Fill_8 #Fill_8 {
+  fill: rgba(77, 104, 193, 1);
+}
+.activeShape .Oval_cm #Oval_cm {
+  opacity: 1;
+  fill: #fff;
+}
+.activeShape #Page_1_co .Fill_4_cp #Fill_4_cp {
+  fill: #1fca74;
+}
+.activeShape #L {
+  opacity: 1;
+  color: #fff;
+}
+.activeIcon {
+  opacity: 1;
+  fill: #fff;
+}

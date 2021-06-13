@@ -1,0 +1,154 @@
+.ItemFriend {
+  /* position: absolute; */
+  width: 260px;
+  height: 102.5px;
+  left: 20.467px;
+  top: 81px;
+  padding: 0 15px 0 15px;
+}
+#Oval_c {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  /* position: absolute; */
+  width: 40.933px;
+  height: 40px;
+  left: 0px;
+  top: 22px;
+  overflow: visible;
+  float: left;
+}
+.ItemFriendImg {
+  height: 45%;
+  float: left;
+  padding-right: 5px;
+}
+.ItemFriend a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 103px;
+  border-radius: 10px;
+  display: block;
+}
+.ItemFriendActive {
+  background-color: #1fca74;
+  text-decoration: none;
+}
+.ItemFriendActive span {
+  color: #fff;
+}
+.ItemFriend a:hover {
+  background-color: #1fca74;
+  text-decoration: none;
+}
+.ItemFriend a:hover span {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Adobe {
+  width: 37px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+  float: left;
+}
+.Three {
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(155, 155, 155, 1);
+  padding-top: 10px;
+}
+.ItemFriendText {
+  display: grid;
+  grid-auto-rows: auto;
+  width: 180px;
+}
+
+.LineTop {
+  display: block;
+  width: 226px;
+  height: 1px;
+  margin-left: 15px;
+  opacity: 0.2;
+  fill: transparent;
+  background-color: rgba(16, 27, 79, 1);
+}
+.LineBottom {
+  display: block;
+  width: 226px;
+  height: 1px;
+
+  opacity: 0.2;
+  fill: transparent;
+  background-color: rgba(16, 27, 79, 1);
+}
+.Line_dc {
+  width: 100%;
+  height: 26px;
+  left: 0px;
+  top: 102.5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Line_dc {
+  opacity: 0.2;
+  fill: transparent;
+  stroke: rgba(16, 27, 79, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Line_Copy_dd {
+  width: 100%;
+  height: 1px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Line_Copy_dd {
+  opacity: 0.3;
+  fill: transparent;
+  stroke: rgba(16, 27, 79, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: square;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.NameAndHour {
+  display: flex;
+  width: 180px;
+}
+.Ricardo_Lopez {
+  left: 53.823px;
+  top: 21px;
+  /* position: absolute; */
+  overflow: visible;
+  width: 88px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+  flex: auto;
+}
+.ID1123_am {
+  opacity: 1;
+  white-space: nowrap;
+  text-align: right;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #9b9b9b;
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="close" transform="translate(1 1)">
+    <circle id="Oval_2" data-name="Oval 2" cx="13" cy="13" r="13" fill="none" stroke="#9b9b9b" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Combined_Shape" data-name="Combined Shape" d="M4.578,10.508V7.282H1.352a1.352,1.352,0,0,1,0-2.7H4.578V1.352a1.352,1.352,0,0,1,2.7,0V4.578h3.226a1.352,1.352,0,0,1,0,2.7H7.282v3.226a1.352,1.352,0,0,1-2.7,0Z" transform="translate(13 4.614) rotate(45)" fill="#9b9b9b"/>
+  </g>
+</svg>
