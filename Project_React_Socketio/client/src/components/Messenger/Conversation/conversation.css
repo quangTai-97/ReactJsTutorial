@@ -144,6 +144,7 @@
 }
 .ID1123_am {
   opacity: 1;
+  /* text-transform: uppercase; */
   white-space: nowrap;
   text-align: right;
   font-family: AvenirNext-Medium;

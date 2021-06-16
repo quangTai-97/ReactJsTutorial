@@ -1,0 +1,50 @@
+.footer {
+  background-color: rgba(91, 96, 117, 1);
+  grid-template-columns: 25% auto;
+  display: grid;
+}
+.comboboxLaguage {
+  position: relative;
+  left: 22%;
+  padding-top: 4px;
+}
+
+select {
+  background: #5b6075;
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  font-family: AvenirNext-Medium;
+}
+.createLink {
+  position: relative;
+}
+.createLink nav {
+  float: right;
+  padding-right: 50px;
+}
+.createLink nav ul {
+  padding-top: 4px;
+}
+.createLink nav ul li {
+  display: inline;
+}
+.createLink nav ul li a {
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: AvenirNext-Medium;
+  color: #fff;
+}
+.rounded-corners {
+  opacity: 0.5;
+  background: #fff;
+  clip-path: circle(50%);
+  height: 0.3em;
+  width: 0.3em;
+  display: inline-block;
+  margin: 0px 10px 0 10px;
+}
+.createLink nav ul li a:hover {
+  opacity: 1;
+}

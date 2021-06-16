@@ -1,0 +1,82 @@
+.header {
+  background-color: #fff;
+  display: flex;
+}
+.headerImg {
+  padding: 1em 0.5em 0 2em;
+}
+.headerText {
+  flex: 1.5;
+  padding-top: 1em;
+}
+.headerIcon {
+  flex: 1;
+  padding-top: 1em;
+}
+.headerCompany {
+  flex: 1;
+  margin-top: -0.4em;
+}
+.headerOffer {
+  flex: 1;
+  margin-top: -0.4em;
+}
+.headerIconClose {
+  flex: 0.5;
+  padding: 1em 1.5em 0 0;
+  text-align: right;
+}
+.headerText a {
+  font-size: 18px;
+  font-family: AvenirNext-Regular;
+  color: #101b4f;
+}
+
+.headerIcon a {
+  color: rgba(16, 27, 79, 1);
+  opacity: 0.3;
+  padding-right: 2em;
+}
+
+.headerImg img {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  width: 40px;
+  height: 40px;
+}
+.headerCompany {
+  display: inline-grid;
+  grid-template-rows: 50% 50%;
+}
+.headerCompanyText {
+  font-family: AvenirNext-Medium;
+  font-size: 12px;
+  color: #9b9b9b;
+  padding-top: 1.5em;
+}
+.headerOfferText {
+  font-family: AvenirNext-Medium;
+  font-size: 12px;
+  color: #9b9b9b;
+  padding-top: 1.2em;
+}
+.headerCompanyInvision {
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+.headerOfferAdvertising {
+  white-space: nowrap;
+  text-align: left;
+  font-family: AvenirNext-Medium;
+
+  font-size: 14px;
+  color: rgba(16, 27, 79, 1);
+}
+.headerOffer {
+  display: inline-grid;
+  grid-template-rows: 50% 50%;
+}
