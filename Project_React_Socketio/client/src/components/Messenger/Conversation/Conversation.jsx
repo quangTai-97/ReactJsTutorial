@@ -1,16 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { format } from "timeago.js";
 import Moment from "react-moment";
 import "./conversation.css";
 
 export default function Conversation({ converstion, currentUser, active }) {
   const [user, setUser] = useState({});
   const [lastMessage, setLastMessage] = useState([]);
-  const [lastMessage1, setLastMessage1] = useState("");
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-  const text = "",
-    createdAt = "";
+
   useEffect(() => {
     const friendId = converstion.members.find((m) => m !== currentUser._id);
 
@@ -38,7 +35,6 @@ export default function Conversation({ converstion, currentUser, active }) {
     };
     getMessage();
   }, [converstion]);
-  console.log("lastMessage", lastMessage);
 
   return (
     <div class="ItemFriend">

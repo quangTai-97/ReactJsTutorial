@@ -31,7 +31,7 @@
 }
 
 .loginBox {
-  height: 300px;
+  height: 360px;
   width: 400px;
   padding: 20px;
   /* background-color: white; */
@@ -47,6 +47,7 @@
   border: 1px solid #f3e4cd;
   font-size: 18px;
   padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .loginInput:focus {
@@ -62,6 +63,7 @@
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .loginButton:focus {

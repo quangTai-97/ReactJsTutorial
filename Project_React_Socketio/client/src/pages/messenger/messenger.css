@@ -3,3 +3,196 @@
   background-color: #1fca74;
   border-radius: 10px;
 }
+
+/* ================================= START MENU =================================*/
+
+.Messenger {
+  padding: 15px;
+  grid-template-columns: 100px auto;
+  height: 100%;
+  display: grid;
+}
+/* ================================= END MENU =================================*/
+
+/* ================================= CONTAINER CONTENT =================================*/
+.containerContent {
+  grid-template-rows: auto 2em;
+  display: grid;
+}
+.headerContent {
+  /* background-color: rgb(4, 255, 24); */
+  background-color: #eef0f9;
+
+  grid-template-rows: 70px auto;
+  display: grid;
+}
+/* HOME PAGE */
+
+/* EXPERTISE*/
+.expertise {
+  position: relative;
+  background-color: #098446;
+}
+.expertiseContent {
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.textYouHave {
+  position: absolute;
+  font-size: 12px;
+  font-family: AvenirNext-Medium;
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  padding-bottom: 5px;
+}
+.textExpertise {
+  position: absolute;
+  font-size: 18px;
+  font-family: AvenirNext-Regular;
+  color: #fff;
+  top: 30%;
+  opacity: 1;
+}
+.progress {
+  position: relative;
+  border-radius: 10px;
+  background-color: #104c2d;
+  height: 6px;
+  position: relative;
+  top: 85%;
+}
+.expertiseIconRight {
+  position: absolute;
+  left: 92%;
+  top: 30%;
+  width: 10px;
+  margin: auto;
+}
+.Inner {
+  grid-template-columns: auto 17.5em;
+  display: grid;
+}
+
+.ChatBox {
+  grid-template-rows: 4em auto;
+  display: grid;
+}
+
+.conversationFriend {
+  overflow-y: auto;
+}
+.conversation {
+  position: relative;
+  background-color: rgba(16 27 79 / 5%);
+}
+#Rectangle_3_c {
+  opacity: 0.05;
+  background-color: #101b4f;
+}
+.Rectangle_3_c {
+  position: absolute;
+  width: 16em;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+.convartionMain {
+  display: grid;
+  grid-template-rows: 4em 700px;
+}
+.conversationSearch {
+  position: relative;
+  padding: 12px 0 0 18px;
+}
+
+.buttonSearch {
+  position: absolute;
+  top: 26px;
+  left: 25px;
+}
+.buttonSearch button {
+  background: none;
+  border: none;
+}
+.Fill_1_c {
+  width: 20px;
+  height: 32px;
+}
+.inputSearch {
+  height: 40px;
+  opacity: 0.5;
+  border-radius: 10px;
+  padding-left: 2.5em;
+  border: none;
+  width: 85%;
+}
+.inputSearch:focus {
+  outline-style: none;
+
+  opacity: 1;
+}
+.chatContent {
+  background-color: #eef0f9;
+  display: grid;
+  grid-template-rows: 600px 70px;
+}
+.chatContentText {
+  padding: 1em 0 0 0;
+  overflow-y: scroll;
+}
+
+/* ======================== */
+.chatContentInput {
+  /* position: relative;
+  top: 20%;
+  left: 7%; */
+  display: flex;
+  height: 45px;
+  padding: 0em 1em 0 2.5em;
+}
+.input {
+  /* position: absolute;
+  width: 36.8em;
+  height: 2.8em; */
+  border-radius: 10px;
+  padding-left: 2em;
+  border: none;
+  flex: 1;
+}
+.enter {
+  /* position: absolute;
+  top: 14%;
+  left: 76%; */
+  position: relative;
+  left: -7%;
+  padding-top: 9px;
+}
+.enter button {
+  background: none;
+  border: none;
+}
+.chatContentInputImg {
+  /* position: absolute;
+  left: 84%;
+  top: 14%; */
+  padding-top: 6px;
+}
+.input:focus {
+  outline-style: none;
+}
+#Fill_1 {
+  fill: rgba(77, 104, 193, 1);
+}
+.Fill_1 {
+  width: 18.518px;
+  height: 19.367px;
+}
+#Oval_Copy_2_ {
+  filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+  width: 40px;
+  height: 40px;
+}
+/* ====== */

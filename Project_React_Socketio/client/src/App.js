@@ -1,5 +1,6 @@
 import Login from "./pages/login/Login";
 import Messenger from "./pages/messenger/Messenger";
+import Registry from "./pages/registry/registry";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,17 +12,20 @@ import { AuthContext } from "./context/AuthContext";
 
 function App() {
   const { user } = useContext(AuthContext);
-  console.log("!user", !user);
+
   return (
     <Router>
       <Switch>
-        {<Route path="/">{user === null ? <Login /> : <Messenger />}</Route>}
+        <Route exact path="/">
+          {user === null ? <Login /> : <Messenger />}
+        </Route>
+
+        <Route path="/registry" component={Registry} />
+
         <Route path="/login">
           {user ? <Redirect to="/messenger" /> : <Login />}
         </Route>
-        <Route path="/messenger">
-          {!user === true ? <Login /> : <Messenger />}
-        </Route>
+        <Route path="/messenger">{!user ? <Login /> : <Messenger />}</Route>
       </Switch>
     </Router>
   );
