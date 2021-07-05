@@ -9,14 +9,15 @@ import {
 } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
-import Notifications from 'react-notify-toast';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const { user } = useContext(AuthContext);
 
   return (
     <Router>
-        <Notifications options={{zIndex: 200, left: '50px'}} />
+      <ToastContainer />
       <Switch>
         <Route exact path="/">
           {user === null ? <Login /> : <Messenger />}
