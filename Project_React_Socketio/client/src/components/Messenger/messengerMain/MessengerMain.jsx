@@ -2,8 +2,8 @@ import "./../../../pages/messenger/messenger.css";
 import { AuthContext } from "./../../../context/AuthContext";
 import { useContext, useEffect, useState, useRef, React } from "react";
 import Conversation from "./../Conversation/Conversation";
-import Message from "./../message/Massage";
-import ChatBoxHeader from "./../chatBoxHeader/ChatBoxHeader";
+import Message from "./../Message/Massage";
+import ChatBoxHeader from "./../ChatBoxHeader/ChatBoxHeader";
 import axios from "axios";
 import io from "socket.io-client";
 

@@ -1,0 +1,19 @@
+.userfrom{
+    margin-top: 20px;
+ 
+}
+
+.inputClass{
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.inputClass:focus{
+    outline: none;
+}
+
+button{
+    padding: 10px;
+    float: right;
+}

@@ -17,6 +17,20 @@ router.get("/", async (req, res) => {
   }
 });
 
+//update a user
+router.put("/", async (req, res) => {
+
+  try {
+    const id = req.body.id;
+    const update = req.body;
+
+    var data = await User.findByIdAndUpdate(id,update);
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //get friends
 router.get("/friends/:userId", async (req, res) => {
   try {
