@@ -1,37 +1,36 @@
 import "./menu.css";
+
 import React from "react";
 import { useState } from "react";
 import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 
 export default function Menu() {
-  const [isActive, SetIsActive] = useState(2);
+
   const logout = () => {
     window.localStorage.clear();
     window.location.href = "/login";
   };
 
-  const addActiveClass = (index) => {
-    SetIsActive(index);
-  };
+
   return (
     <div className="menu">
       <div className="item navMenu">
-        <a
-          href="#"
-          className={`active ${isActive === 0 ? "activeShape" : ""}`}
-          onClick={() => addActiveClass(0)}
+        <NavLink
+          to="/Home"
+          activeClassName="activeShape"
+          className="active"
         >
           <div className="shape">
             <div className="Rectangle"></div>
           </div>
           <div className="textHome">L</div>
-        </a>
+        </NavLink>
       </div>
       <div className="item2 navMenu">
-        <a
-          href="#"
-          className={`active ${isActive === 1 ? "activeShape" : ""}`}
-          onClick={() => addActiveClass(1)}
+        <NavLink
+          to="/offers"
+          activeClassName="activeShape"
+          className="active"
         >
           <div className="shape">
             <div className="Rectangle"></div>
@@ -43,13 +42,14 @@ export default function Menu() {
             </svg>
           </div>
           <div className="textItem">Offers</div>
-        </a>
+        </NavLink>
       </div>
       <div className="item2 navMenu">
         <NavLink
+        exact
           to="/messenger"
-          className={`active ${isActive === 2 ? "activeShape" : ""}`}
-          onClick={() => addActiveClass(2)}
+          activeClassName="activeShape"
+          className="active"
         >
           <div className="shape">
             <div className="Rectangle"></div>
@@ -84,10 +84,10 @@ export default function Menu() {
         </NavLink>
       </div>
       <div className="item2 navMenu">
-        <a
-          href="#"
-          className={`active ${isActive === 3 ? "activeShape" : ""}`}
-          onClick={() => addActiveClass(3)}
+        <NavLink
+          to="/board"
+            activeClassName="activeShape"
+          className="active"
         >
           <div className="shape">
             <div className="Rectangle"></div>
@@ -111,13 +111,13 @@ export default function Menu() {
               ></path>
             </svg>
           </div>
-        </a>
+        </NavLink>
       </div>
       <div className="item2 navMenu">
-        <a
-          href="#"
-          className={`active ${isActive === 4 ? "activeShape" : ""}`}
-          onClick={() => addActiveClass(4)}
+        <NavLink
+        to="/application"
+            activeClassName="activeShape"
+          className="active"
         >
           <div className="shape">
             <div className="Rectangle"></div>
@@ -130,13 +130,14 @@ export default function Menu() {
             </svg>
           </div>
           <div className="textItem">Application</div>
-        </a>
+        </NavLink>
       </div>
       <div className="item2 navMenu">
-        <Link
+        <NavLink 
+        activeClassName="activeShape"
           to="/messenger/list"
-          className={`active ${isActive === 5 ? "activeShape" : ""}`}
-          // onClick={() => addActiveClass(5)}
+          className="active"
+
         >
           <div className="shape">
             <div className="Rectangle">
@@ -150,13 +151,14 @@ export default function Menu() {
             </svg>
           </div>
           <div className="textItem">Lists</div>
-        </Link>
+        </NavLink>
       </div>
       <div className="item2 navMenu">
-        <a
-          href="#"
-          className={`active ${isActive === 6 ? "activeShape" : ""}`}
-          onClick={() => addActiveClass(6)}
+        <NavLink
+        to="/faq"
+             activeClassName="activeShape"
+          className="active"
+
         >
           <div className="shape">
             <div className="Rectangle"></div>
@@ -168,14 +170,14 @@ export default function Menu() {
             </svg>
           </div>
           <div className="textItem">FAQ</div>
-        </a>
+        </NavLink>
       </div>
 
       <div className="item2 navMenu">
-        <a
-          href="#"
+        <NavLink
+         to="/logout"
           onClick={logout}
-          className={`active ${isActive === 7 ? "activeShape" : ""}`}
+          className="active"
         >
           <div className="shape">
             <div className="Rectangle"></div>
@@ -185,7 +187,7 @@ export default function Menu() {
             </div>
           </div>
           <div className="textItem">Log out</div>
-        </a>
+        </NavLink>
       </div>
     </div>
   );
