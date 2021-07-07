@@ -11,36 +11,18 @@ import MessengerMain from "../../components/Messenger/messengerMain/MessengerMai
 import ManageUser from "../../components/User/ManageUser";
 import ProcessFriends from "../../components/ProcessFriend/ProcessFriends";
 
-
-import ManageUser from "./../../components/User/ManageUser";
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
+
 export default function Messenger() {
   const { user } = useContext(AuthContext);
 
   return (
     <Router>
-
-        
-    <div class="container">
-      <div class="Messenger">
-        <Menu />
-        <div class="containerContent">
-          <div class="headerContent">
-            <HomePgae Username={user} />
-            <div class="Inner">
-              <Switch>
-                <Route exact path="/messenger" component={MessengerMain} />
-                <Route path="/messenger/list" component={ManageUser} />
-                <Route path="/messenger/processFriend" component={ProcessFriends} />
-                
-              </Switch>
-
       <div class="container">
         <div class="Messenger">
           <Menu />
@@ -51,9 +33,12 @@ export default function Messenger() {
                 <Switch>
                   <Route exact path="/messenger" component={MessengerMain} />
                   <Route path="/messenger/list" component={ManageUser} />
+                  <Route
+                    path="/messenger/processFriend"
+                    component={ProcessFriends}
+                  />
                 </Switch>
               </div>
-
             </div>
             <Footer />
           </div>

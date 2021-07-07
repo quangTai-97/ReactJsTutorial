@@ -1,17 +1,20 @@
-const { agreeFriend, refuseFriend, pendingRequest, addFriend } = require('./common');
-
+const {
+  agreeFriend,
+  refuseFriend,
+  pendingRequest,
+  addFriend,
+} = require("./common");
 
 const router = require("express").Router();
 const Conversation = require("../models/Conversation");
 const User = require("../models/User");
-
+const Message = require("../models/Message");
 
 //new conversation Add Friend
 router.post("/", async (req, res) => {
-  
   const newConversation = new Conversation({
     members: [req.body.senderId, req.body.receiverId],
-    status:addFriend
+    status: addFriend,
   });
 
   try {
@@ -37,21 +40,38 @@ router.get("/:userId", async (req, res) => {
 //GET ALL
 router.get("/getall/:userId", async (req, res) => {
   try {
+    const ids = [];
+    const obj = {};
     const userIdInConversation = await Conversation.find({
       members: { $in: [req.params.userId] },
     });
+    userIdInConversation.map((x) => {
+      obj._id = x.members.find((a) => a !== req.params.userId);
 
-   
-    const getAllUser = await  User.find().forEach(
-      function (newBook) {
-          newBook.category = db.categories.findOne( { "_id": newBook.category } );
-          newBook.lendings = db.lendings.find( { "book": newBook._id  } ).toArray();
-          newBook.authors = db.authors.find( { "_id": { $in: newBook.authors }  } ).toArray();
-          db.booksReloaded.insert(newBook);
-      }
-  );
+      obj.status = "agreeFriend";
 
-    res.status(200).json(getAllUser);
+      ids.push(obj);
+    });
+
+    const data = await ids.aggregate([
+      {
+        $lookup: {
+          from: "User",
+          let: { userid: "$_id" },
+          pipeline: [
+            {
+              $match: {
+                $expr: {
+                  $eq: ["$$userid", "$_id"],
+                },
+              },
+            },
+          ],
+          as: "tagList",
+        },
+      },
+    ]);
+    res.status(200).json(data);
   } catch (err) {
     res.status(500).json(err);
   }
