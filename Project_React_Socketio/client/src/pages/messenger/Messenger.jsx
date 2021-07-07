@@ -8,6 +8,7 @@ import Menu from "../../components/Messenger/menuHome/Menu";
 import Footer from "../../components/Messenger/footer/Footer";
 import MessengerMain from "../../components/Messenger/messengerMain/MessengerMain";
 import ManageUser from "../../components/User/ManageUser";
+import ProcessFriends from "../../components/ProcessFriend/ProcessFriends";
 
 
 import {
@@ -32,6 +33,8 @@ export default function Messenger() {
               <Switch>
                 <Route exact path="/messenger" component={MessengerMain} />
                 <Route path="/messenger/list" component={ManageUser} />
+                <Route path="/messenger/processFriend" component={ProcessFriends} />
+                
               </Switch>
             </div>
           </div>

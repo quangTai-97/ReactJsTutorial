@@ -85,7 +85,7 @@ export default function Menu() {
       </div>
       <div className="item2 navMenu">
         <NavLink
-          to="/board"
+          to="/messenger/processFriend"
             activeClassName="activeShape"
           className="active"
         >
@@ -102,7 +102,7 @@ export default function Menu() {
               ></ellipse>
             </svg>
           </div>
-          <div className="textItem">Board</div>
+          <div className="textItem">Friends</div>
           <div id="Page_1_co">
             <svg className="Fill_4_cp" viewBox="0 0 18.064 14.681">
               <path
