@@ -1,0 +1,15 @@
+#Oval_c {
+    filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
+    /* position: absolute; */
+    width: 40.933px;
+    height: 40px;
+    left: 0px;
+    top: 22px;
+    overflow: visible;
+    float: left;
+  }
+  .ItemFriendImg {
+    height: 45%;
+    float: left;
+    padding-right: 5px;
+  }

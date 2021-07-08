@@ -19,7 +19,7 @@ function App() {
     <Router>
       <ToastContainer />
       <Switch>
-        <Route exact path="/messenger">
+        <Route exact path="/">
           {user === null ? <Login /> : <Messenger />}
         </Route>
 
