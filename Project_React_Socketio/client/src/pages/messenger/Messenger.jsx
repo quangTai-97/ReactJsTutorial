@@ -3,7 +3,7 @@ import "./messenger.css";
 import React from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
-import HomePgae from "./../../components/Messenger/chatTop/Hompage";
+import HomePgae from "./../../components/Messenger/ChatTop/Hompage";
 import Menu from "../../components/Messenger/menuHome/Menu";
 import Footer from "../../components/Messenger/footer/Footer";
 import MessengerMain from "../../components/Messenger/messengerMain/MessengerMain";

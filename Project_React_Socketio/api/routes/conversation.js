@@ -8,9 +8,9 @@ const {
 const router = require("express").Router();
 const Conversation = require("../models/Conversation");
 const User = require("../models/User");
-const Message = require("../models/Message");
 
-//new conversation Add Friend
+
+
 router.post("/", async (req, res) => {
   const newConversation = new Conversation({
     members: [req.body.senderId, req.body.receiverId],
@@ -45,45 +45,76 @@ router.get("/getall/:userId", async (req, res) => {
     const userIdInConversation = await Conversation.find({
       members: { $in: [req.params.userId] },
     });
-    ids.push(req.params.userId);
-    userIdInConversation.map((x) => {
 
-      obj._id = x.members.find((a) => a !== req.params.userId);
 
-      obj.status = "agreeFriend";
+  var data = await User.aggregate([
+    {
+      $project: {
+        _id: {
+          $toString: "$_id"
+        }
+      }
+    },
+    { $lookup: {
+      from: Conversation.collection.name,
+      let: { userId: "$_id" },
+      pipeline: [
+        { "$match": { "$expr": { "$in": [ "$$userId", "$members" ] } } }
+      ],
+      as: "output"
+    }}
+  ]);
+    data.map((c)=>{
+      if(c._id === req.params.userId)
+      {
+        c.output.map((d)=>{
+          ids.push(
+            {
+              id : d.members[1],
+              status : d.status,
+              conversationId: d._id
+            });
+        }
+        )
+      
+      }
+    })
+    var user = await User.aggregate([
+      {
+        $addFields: {
+           "status": "",
+           "conversationId":""
+        }
+     },
+     {
+       $project:{
+         _id:1,
+         username:1,
+         status:1,
+         profilePicture:1,
+         conversationId:1
 
-      ids.push(x.members.find((a) => a !== req.params.userId));
+       }
+     }
+    ]);
+
+    user.map((userId)=>{
+
+        ids.map((idId)=>{
+          if(idId.id === userId._id.toString())
+          {
+            userId.status = idId.status;
+            userId.conversationId =  idId.conversationId;
+          }
+        })
+
     });
 
-  // const data =  await User.find( { _id: { $nin:ids } } )
-  const data = await User.aggregate([
-  { 
-    $lookup: {
-    from: "Conversation",
-    let: { user_id: "$_id" },
-    pipeline: [
-      { 
-      $match: {
-        $expr: 
-        { "$in": [ "$$user_id", "$members" ] },
-      }}
-    ],
-    "as": "shopDescr"
-  }
-},
-  {
-    $group:
-      {
-        _id: '$_id',
-        Name:{ $first : "$username" }
-      
-        
-      }
-   }
-  
 
-  ])
-    res.status(200).json();
+    //console.log('user',req.params.userId);
+  //console.log('user',user.find( { _id: { $ne: req.params.userId } } ));
+
+    res.status(200).json(user)
   } catch (err) {
     res.status(500).json(err);
   }

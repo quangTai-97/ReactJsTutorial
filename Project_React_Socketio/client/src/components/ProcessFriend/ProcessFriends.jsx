@@ -2,6 +2,7 @@ import React, { useState,useEffect,useContext } from 'react';
 import "./processFriends.css";
 import { AuthContext } from "./../../context/AuthContext";
 import axios from "axios";
+
 export default function ProcessFriends(){
     const [friends,setFriends] = useState([]);
     const { user } = useContext(AuthContext);
@@ -20,7 +21,14 @@ export default function ProcessFriends(){
         getData();
 
        
-    })
+    });
+
+    const AddFriend = (id) =>{
+        const members = [];
+        members[0] = user._id;
+        members[1] = id;
+        
+    }
 return (
 <div>
      <div className="inputSearch">
@@ -43,7 +51,7 @@ return (
           />
     
                   <label htmlFor="text" className="friendText">{fr.username}</label>
-                  <button className="btn btn-primary"><i class="fas fa-user-plus"></i> Add Friend</button>
+                  {fr.status === "" ? <button className="btn btn-primary" onClick={() => AddFriend(fr._id)}><i class="fas fa-user-plus"></i> Add Friend</button> : <button className="btn btn-success"><i class="fas fa-comment-dots"></i> Chat</button> }
                 </div>
                 ))
          
