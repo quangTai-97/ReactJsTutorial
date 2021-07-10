@@ -1,6 +1,7 @@
 import Login from "./pages/login/Login";
 import Messenger from "./pages/messenger/Messenger";
 import Registry from "./pages/registry/registry";
+import ProcessFriends from "./components/ProcessFriend/ProcessFriends";
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,7 +21,11 @@ function App() {
       <ToastContainer />
       <Switch>
         <Route exact path="/">
-          {user === null ? <Login /> : <Messenger />}
+          {user === null ? (
+            <Login />
+          ) : (
+            <Redirect to="/messenger/processFriend" />
+          )}
         </Route>
 
         <Route path="/registry" component={Registry} />
