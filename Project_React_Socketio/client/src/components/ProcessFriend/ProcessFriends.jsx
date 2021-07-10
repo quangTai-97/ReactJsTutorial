@@ -1,62 +1,97 @@
-import React, { useState,useEffect,useContext } from 'react';
+import React, { useState, useEffect, useContext } from "react";
 import "./processFriends.css";
 import { AuthContext } from "./../../context/AuthContext";
 import axios from "axios";
+import { toast } from "react-toastify";
+import { Switch } from "react-router-dom";
+import Processbtn from "./processBtn/Processbtn";
+import * as statusBtn from "./../Common/CommonSetting";
 
-export default function ProcessFriends(){
-    const [friends,setFriends] = useState([]);
-    const { user } = useContext(AuthContext);
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-    useEffect(()=>{
-        const getData = async () =>{
-            try {
-                const res = await axios.get("/conversations/getall/"+user._id);
-                setFriends(res.data);
-              
-            } catch (error) {
-                console.log('error ProcessFriend',error);
-            }
-        }
-        
-        getData();
+export default function ProcessFriends() {
+  const [friends, setFriends] = useState([]);
+  const [count, setCount] = useState(false);
+  const { user } = useContext(AuthContext);
 
-       
-    });
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await axios.get("/conversations/getall/" + user._id);
 
-    const AddFriend = (id) =>{
-        const members = [];
-        members[0] = user._id;
-        members[1] = id;
-        
+        setFriends(res.data);
+      } catch (error) {
+        console.log("error ProcessFriend", error);
+      }
+    };
+
+    getData();
+  }, [user]);
+
+  const AddFriend = async (idFriend) => {
+    const members = {
+      senderId: user._id,
+      receiverId: idFriend,
+    };
+
+    try {
+      const res = await axios.post("/conversations", members);
+      if (res.status === 200) {
+        const rs = await axios.get("/conversations/getall/" + user._id);
+        setFriends(rs.data);
+      } else {
+        toast.warning("Error System !");
+      }
+    } catch (error) {
+      console.log("add conversation", error);
     }
-return (
-<div>
-     <div className="inputSearch">
-    <label htmlFor="text">Tìm kiếm</label>
-     </div>
-     <div className="listFriend">
+  };
 
-         {      
-                friends.map( (fr,index) => (
-                <div key={index}>
-                  
-          <img
-           className="friendImg"
-            src={
-              fr.profilePicture !== ""
-                ? PF + fr.profilePicture
-                : PF + "person/noAvatar.png"
-            }
-            alt=""
-          />
-    
-                  <label htmlFor="text" className="friendText">{fr.username}</label>
-                  {fr.status === "" ? <button className="btn btn-primary" onClick={() => AddFriend(fr._id)}><i class="fas fa-user-plus"></i> Add Friend</button> : <button className="btn btn-success"><i class="fas fa-comment-dots"></i> Chat</button> }
-                </div>
-                ))
-         
-         }
-    
-     </div>
-     </div>)
+  const UpdateStatusFriend = async (idConversation) => {
+    try {
+      const conversation = {
+        _id: idConversation,
+        status: statusBtn.agreeFriend,
+      };
+      const res = await axios.put("/conversations", conversation);
+      if (res.status === 200) {
+        const rs = await axios.get("/conversations/getall/" + user._id);
+        setFriends(rs.data);
+      } else {
+        toast.warning("Error System !");
+      }
+    } catch (error) {
+      console.log("update conversation", error);
+    }
+  };
+  const DeleteConversation = async (idConversation) => {
+    try {
+      const res = await axios.delete("/conversations" + idConversation);
+      if (res.status === 200) {
+        const rs = await axios.get("/conversations/getall/" + user._id);
+        setFriends(rs.data);
+      } else {
+        toast.warning("Error System !");
+      }
+    } catch (error) {
+      console.log("Delete conversation", error);
+    }
+  };
+
+  return (
+    <div>
+      <div className="inputSearch">
+        <label htmlFor="text">Tìm kiếm</label>
+      </div>
+      <div className="listFriend">
+        {friends.map((fr, index) =>
+          fr._id !== user._id ? (
+            <div key={index}>
+              <Processbtn friend={fr} userId={user._id} />
+            </div>
+          ) : (
+            ""
+          )
+        )}
+      </div>
+    </div>
+  );
 }
