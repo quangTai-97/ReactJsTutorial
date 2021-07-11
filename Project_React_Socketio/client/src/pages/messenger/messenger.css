@@ -110,7 +110,7 @@
 
 .buttonSearch {
   position: absolute;
-  top: 26px;
+  top: 19px;
   left: 25px;
 }
 .buttonSearch button {
@@ -137,7 +137,7 @@
 .chatContent {
   background-color: #eef0f9;
   display: grid;
-  grid-template-rows: 600px 70px;
+  grid-template-rows: 550px 100px 50px;
 }
 .chatContentText {
   padding: 1em 0 0 0;
@@ -168,7 +168,6 @@
   left: 76%; */
   position: relative;
   left: -7%;
-  padding-top: 9px;
 }
 .enter button {
   background: none;
@@ -194,5 +193,15 @@
   filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
   width: 40px;
   height: 40px;
+  border-radius: 100px;
 }
 /* ====== */
+.addFile {
+  position: relative;
+  top: 23%;
+  right: 1%;
+}
+.BeforeAddFile {
+  display: flex;
+  margin-left: 6rem;
+}

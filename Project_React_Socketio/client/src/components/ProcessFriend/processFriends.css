@@ -16,7 +16,25 @@
 .friendImg {
   width: 50px;
   height: 50px;
+  border-radius: 100px;
+  margin-right: 30px;
+  margin-bottom: 10px;
 }
 .listFriend {
   padding: 10px;
+}
+.searchUserName {
+  padding: 20px;
+}
+.searchUserName .search {
+  width: 75%;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  margin-left: 15px;
+}
+.search:focus {
+  outline: none;
 }

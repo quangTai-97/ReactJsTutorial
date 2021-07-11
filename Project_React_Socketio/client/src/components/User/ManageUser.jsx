@@ -40,8 +40,8 @@ export default function ManageUser() {
           username,
           email,
           company,
-          profilePicture,
-          coverPicture: file.name,
+          profilePicture: file.name,
+          // coverPicture: file.name,
         };
         const resUser = await axios.put("/users", userNew);
         //console.log("data", userNew);
@@ -61,7 +61,7 @@ export default function ManageUser() {
         username,
         email,
         company,
-        profilePicture,
+        //profilePicture,
       };
       const resUser = await axios.put("/users", userNew);
       //console.log("data", userNew);
@@ -121,22 +121,60 @@ export default function ManageUser() {
             onChange={(e) => setCompany(e.target.value)}
           />
         </div>
+
         <div>
-          <label className="lbForm col-3">
-            <i class="fas fa-images"></i> Image:
+          <label
+            htmlFor="file"
+            className="shareOption col-3"
+            style={{ float: "left" }}
+          >
+            <span className="shareOptionText">
+              <i class="fas fa-images"></i> Profile Picture
+            </span>
+            <input
+              style={{ display: "none" }}
+              type="file"
+              id="file"
+              accept=".png,.jpeg,.jpg"
+              onChange={(e) => setFile(e.target.files[0])}
+            />
           </label>
-          <img
-            className="col-7 inputClass"
-            src={
-              profilePicture !== ""
-                ? PF + profilePicture
-                : PF + "person/noAvatar.png"
-            }
-            alt=""
-            style={{ width: "100px", height: "100px" }}
-          />
+          {file !== null ? (
+            <div className="shareImgContainer col-7">
+              <img
+                className="shareImg"
+                src={URL.createObjectURL(file)}
+                alt=""
+                style={{ width: "150px", height: "150px" }}
+              />
+              <Cancel
+                className="shareCancelImg"
+                onClick={() => setFile(null)}
+              />
+            </div>
+          ) : (
+            ""
+          )}
+          {file === null && profilePicture !== null && (
+            <div className="shareImgContainer col-7">
+              <img
+                className="shareImg"
+                src={
+                  profilePicture !== ""
+                    ? PF + profilePicture
+                    : PF + "person/noAvatar.png"
+                }
+                alt=""
+                style={{ width: "150px", height: "150px" }}
+              />
+              <Cancel
+                className="shareCancelImg"
+                onClick={() => setProfilePicture(null)}
+              />
+            </div>
+          )}
         </div>
-        <div>
+        {/* <div>
           <label
             htmlFor="file"
             className="shareOption col-3"
@@ -187,7 +225,7 @@ export default function ManageUser() {
               />
             </div>
           )}
-        </div>
+        </div> */}
         <div>
           <button type="submit" class="btn btn-success">
             <i class="fas fa-save"></i> Save

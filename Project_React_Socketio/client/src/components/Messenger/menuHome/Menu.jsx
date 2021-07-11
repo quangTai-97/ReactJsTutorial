@@ -5,21 +5,15 @@ import { useState } from "react";
 import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 
 export default function Menu() {
-
   const logout = () => {
     window.localStorage.clear();
     window.location.href = "/login";
   };
 
-
   return (
     <div className="menu">
       <div className="item navMenu">
-        <NavLink
-          to="/Home"
-          activeClassName="activeShape"
-          className="active"
-        >
+        <NavLink to="/Home" activeClassName="activeShape" className="active">
           <div className="shape">
             <div className="Rectangle"></div>
           </div>
@@ -27,11 +21,7 @@ export default function Menu() {
         </NavLink>
       </div>
       <div className="item2 navMenu">
-        <NavLink
-          to="/offers"
-          activeClassName="activeShape"
-          className="active"
-        >
+        <NavLink to="/offers" activeClassName="activeShape" className="active">
           <div className="shape">
             <div className="Rectangle"></div>
             <svg className="Icon">
@@ -46,7 +36,7 @@ export default function Menu() {
       </div>
       <div className="item2 navMenu">
         <NavLink
-        exact
+          exact
           to="/messenger"
           activeClassName="activeShape"
           className="active"
@@ -86,7 +76,7 @@ export default function Menu() {
       <div className="item2 navMenu">
         <NavLink
           to="/messenger/processFriend"
-            activeClassName="activeShape"
+          activeClassName="activeShape"
           className="active"
         >
           <div className="shape">
@@ -115,8 +105,8 @@ export default function Menu() {
       </div>
       <div className="item2 navMenu">
         <NavLink
-        to="/application"
-            activeClassName="activeShape"
+          to="/application"
+          activeClassName="activeShape"
           className="active"
         >
           <div className="shape">
@@ -133,11 +123,10 @@ export default function Menu() {
         </NavLink>
       </div>
       <div className="item2 navMenu">
-        <NavLink 
-        activeClassName="activeShape"
+        <NavLink
+          activeClassName="activeShape"
           to="/messenger/list"
           className="active"
-
         >
           <div className="shape">
             <div className="Rectangle">
@@ -150,16 +139,11 @@ export default function Menu() {
               ></path>
             </svg>
           </div>
-          <div className="textItem">Lists</div>
+          <div className="textItem">User</div>
         </NavLink>
       </div>
       <div className="item2 navMenu">
-        <NavLink
-        to="/faq"
-             activeClassName="activeShape"
-          className="active"
-
-        >
+        <NavLink to="/faq" activeClassName="activeShape" className="active">
           <div className="shape">
             <div className="Rectangle"></div>
             <svg className="Icon">
@@ -174,11 +158,7 @@ export default function Menu() {
       </div>
 
       <div className="item2 navMenu">
-        <NavLink
-         to="/logout"
-          onClick={logout}
-          className="active"
-        >
+        <NavLink to="/logout" onClick={logout} className="active">
           <div className="shape">
             <div className="Rectangle"></div>
             <div className="shapeIcon">

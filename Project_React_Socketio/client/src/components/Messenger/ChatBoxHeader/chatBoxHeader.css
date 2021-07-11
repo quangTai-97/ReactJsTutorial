@@ -4,6 +4,7 @@
 }
 .headerImg {
   padding: 1em 0.5em 0 2em;
+  border-radius: 100px;
 }
 .headerText {
   flex: 1.5;
@@ -42,6 +43,7 @@
   filter: drop-shadow(0px 6px 8px rgba(16, 27, 79, 0.204));
   width: 40px;
   height: 40px;
+  border-radius: 100px;
 }
 .headerCompany {
   display: inline-grid;

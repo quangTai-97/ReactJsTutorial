@@ -17,14 +17,22 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:userId", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    res.status(200).json(user);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //update a user
 router.put("/", async (req, res) => {
-
   try {
     const id = req.body.id;
     const update = req.body;
 
-    var data = await User.findByIdAndUpdate(id,update);
+    var data = await User.findByIdAndUpdate(id, update);
     res.status(200).json(data);
   } catch (err) {
     res.status(500).json(err);

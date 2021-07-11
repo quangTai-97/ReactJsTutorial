@@ -32,6 +32,11 @@ export default function Messenger() {
               <div class="Inner">
                 <Switch>
                   <Route exact path="/messenger" component={MessengerMain} />
+                  <Route
+                    exact
+                    path="/messenger/conversation/:idConversation?"
+                    component={MessengerMain}
+                  />
                   <Route path="/messenger/list" component={ManageUser} />
                   <Route
                     path="/messenger/processFriend"

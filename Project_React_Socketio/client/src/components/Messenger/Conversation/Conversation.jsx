@@ -58,7 +58,9 @@ export default function Conversation({ converstion, currentUser, active }) {
 
             <div class="ID1123_am">
               {/* <Moment format="hh:mm a">{lastMessage.createdAt}</Moment> */}
-              <Moment format="ddd, hh:mm a">{lastMessage.createdAt}</Moment>
+              <Moment format="DD/MM, hh:mm a">
+                {lastMessage ? lastMessage.createdAt : Date.now}
+              </Moment>
 
               {/* <span format="hh:mm a">{lastMessage.createdAt}</span> */}
               {/* <span>
@@ -72,8 +74,8 @@ export default function Conversation({ converstion, currentUser, active }) {
             <span>{user.company}</span>
           </div>
 
-          <div class="Three">
-            <span>{lastMessage.text}</span>
+          <div class="lassMessage">
+            <span>{lastMessage ? lastMessage.text : ""}</span>
           </div>
         </div>
       </a>

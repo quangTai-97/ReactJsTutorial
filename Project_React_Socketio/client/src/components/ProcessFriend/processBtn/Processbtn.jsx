@@ -2,81 +2,76 @@ import React, { useState, useEffect, useContext } from "react";
 import "./processbtn.css";
 import axios from "axios";
 import * as ProcessbtnStatus from "./../../Common/CommonSetting";
-export default function Processbtn({ friend, userId }) {
+
+export default function Processbtn({
+  friend,
+  userId,
+  handle_AddFriend,
+  hanle_UpdateStatusFriend,
+  hanle_DeleteStatusFriend,
+  handle_Chat,
+}) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const [btn, setBtn] = useState();
   const [members, setMembers] = useState([]);
   const [count, setCount] = useState(false);
 
-  useEffect(() => {
-    const getRs = async () => {
-      if (friend.conversationId !== undefined && friend.conversationId !== "") {
-        const res = await axios.get(
-          "/conversations/conversation/" + friend.conversationId
-        );
-        setMembers(res.data.members);
-        if (userId === res.data.members[0]) {
-          setCount(true);
-        }
-      }
-    };
-    getRs();
-  }, [friend, userId]);
-  console.log("friend.idConversation", friend.conversationId);
+  // console.log("statusBtn", statusBtn);
 
-  const AddFriend = async (friendId) => {
-    console.log("Delete conversation");
-  };
-
-  const UpdateStatusFriend = async (idConversation) => {
-    console.log("Delete conversation");
-  };
-  const DeleteConversation = async (idConversation) => {
-    console.log("Delete conversation");
-  };
   useEffect(() => {
     if (friend.status === "") {
       setBtn(
         <button
           className="btn btn-primary"
-          onClick={(e) => AddFriend(friend._id)}
+          onClick={() => handle_AddFriend(friend._id)}
+          title="Add Friend"
         >
-          <i class="fas fa-comment-dots"></i> Add Friend
+          <i class="fas fa-user-plus"></i>
         </button>
       );
     } else if (
       friend.status === ProcessbtnStatus.pendingRequest &&
-      count === false
+      friend.button === false
     ) {
       setBtn(
         <>
           <button
             className="btn btn-danger "
-            onClick={() => DeleteConversation(friend.idConversation)}
+            onClick={() => hanle_DeleteStatusFriend(friend.conversationId)}
+            title="No"
           >
-            <i class="fas fa-times-circle"></i> No
+            <i class="fas fa-times-circle"></i>
           </button>
           <button
-            className="btn btn-info mr-1"
-            onClick={() => UpdateStatusFriend(friend.idConversation)}
+            className="btn btn-success mr-1"
+            onClick={() => hanle_UpdateStatusFriend(friend.conversationId)}
+            title="Yes"
           >
-            <i class="fas fa-check-circle"></i> Yes
+            <i class="fas fa-check-circle"></i>
           </button>
         </>
       );
     } else if (
       friend.status === ProcessbtnStatus.pendingRequest &&
-      count === true
+      friend.button === true
     ) {
       setBtn(
-        <button className="btn btn-danger">
-          <i class="fas fa-times-circle"></i> Cancel
+        <button
+          className="btn btn-danger"
+          onClick={() => hanle_DeleteStatusFriend(friend.conversationId)}
+          title="Cancel Request"
+        >
+          <i class="fas fa-times-circle"></i>
         </button>
       );
     } else {
       setBtn(
-        <button className="btn btn-info">
-          <i class="fas fa-comment-dots"></i> Chat
+        <button
+          className="btn btn-info"
+          onClick={() => handle_Chat(friend.conversationId)}
+          title="Chat"
+        >
+          <i class="fas fa-comment-dots"></i>
         </button>
       );
     }

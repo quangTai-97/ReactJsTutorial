@@ -4,7 +4,7 @@ import { loginCall } from "../../apiCall";
 import { AuthContext } from "../../context/AuthContext";
 import { CircularProgress } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
+import { toast } from "react-toastify";
 export default function Login() {
   const username = useRef();
   const password = useRef();
@@ -50,7 +50,7 @@ export default function Login() {
             <span className="loginForgot">Forgot Password?</span>
             <button type="button" className="loginRegisterButton">
               <Link className="link" to="/registry">
-                Create a New Account
+                Create New Account
               </Link>
             </button>
           </form>

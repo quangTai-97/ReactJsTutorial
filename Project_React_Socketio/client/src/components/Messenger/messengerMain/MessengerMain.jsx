@@ -6,6 +6,8 @@ import Message from "./../message/Massage";
 import ChatBoxHeader from "./../chatBoxHeader/ChatBoxHeader";
 import axios from "axios";
 import io from "socket.io-client";
+import { useLocation } from "react-router";
+import { PermMedia, Cancel } from "@material-ui/icons";
 
 export default function MessengerMain() {
   const [conversations, setConversation] = useState([]);
@@ -18,14 +20,18 @@ export default function MessengerMain() {
   const [active, setActive] = useState(null);
   const { user } = useContext(AuthContext);
   const scrollRef = useRef();
-
+  const [file, setFile] = useState(null);
   const socket = useRef();
+
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const location = useLocation();
+  const path = location.pathname.split("/")[3];
 
   useEffect(() => {
-    socket.current = io("ws://localhost:8990");
+    socket.current = io("ws://localhost:5500");
     socket.current.on("getMessage", (data) => {
       setArrivalMessages({
+        fileName: data.fileName,
         sender: data.senderId,
         text: data.text,
         createdAt: Date.now(),
@@ -34,12 +40,7 @@ export default function MessengerMain() {
   }, []);
 
   useEffect(() => {
-    arrivalMessages &&
-      currentChat?.members.includes(arrivalMessages.sender) &&
-      setMessages((prev) => [...prev, arrivalMessages]);
-  }, [arrivalMessages, currentChat]);
-
-  useEffect(() => {
+    console.log("add User client", user._id);
     socket.current.emit("addUser", user._id);
 
     socket.current.on("getUsers", (users) => {
@@ -48,6 +49,27 @@ export default function MessengerMain() {
       );
     });
   }, [user]);
+
+  useEffect(() => {
+    if (path !== undefined) {
+      const getConversation = async () => {
+        try {
+          const res = await axios.get("/conversations/conversation/" + path);
+
+          setcurrentChat(res.data);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+      getConversation();
+    }
+  }, [path]);
+
+  useEffect(() => {
+    arrivalMessages &&
+      currentChat?.members.includes(arrivalMessages.sender) &&
+      setMessages((prev) => [...prev, arrivalMessages]);
+  }, [arrivalMessages, currentChat]);
 
   useEffect(() => {
     const getConversation = async () => {
@@ -97,28 +119,42 @@ export default function MessengerMain() {
   //SEND MESSAGE
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const message = {
-      sender: user._id,
-      text: newMessages,
-      conversationId: currentChat._id,
-    };
-    console.log("socket currentChat", currentChat);
-    const receiverId = currentChat.members.find(
-      (member) => member !== user._id
-    );
-    console.log("socket receiverId", receiverId);
-    socket.current.emit("sendMessage", {
-      receiverId: receiverId,
-      senderId: user._id,
-      text: newMessages,
-    });
 
-    try {
-      const res = await axios.post("/messages", message);
-      setMessages([...messages, res.data]);
-      setNewMessages("");
-    } catch (err) {
-      console.log("err handleSubmit", err);
+    if (newMessages !== "" || file) {
+      var FileName = "";
+      if (file) {
+        const data = new FormData();
+        FileName = file.name;
+        data.append("name", FileName);
+        data.append("file", file);
+        await axios.post("/upload", data);
+      }
+      const message = {
+        sender: user._id,
+        text: newMessages,
+        fileName: FileName,
+        conversationId: currentChat._id,
+      };
+
+      const receiverId = currentChat.members.find(
+        (member) => member !== user._id
+      );
+
+      socket.current.emit("sendMessage", {
+        receiverId: receiverId,
+        senderId: user._id,
+        text: newMessages,
+        fileName: FileName,
+      });
+
+      try {
+        const res = await axios.post("/messages", message);
+        setMessages([...messages, res.data]);
+        setNewMessages("");
+      } catch (err) {
+        console.log("err handleSubmit", err);
+      }
+      setFile(null);
     }
   };
 
@@ -147,13 +183,59 @@ export default function MessengerMain() {
                 </div>
               ))}
             </div>
+            <div className="BeforeAddFile">
+              {file ? (
+                <>
+                  <img
+                    className="shareImg"
+                    src={
+                      file.name.includes(".zip") !== true
+                        ? URL.createObjectURL(file)
+                        : PF + "zip.png"
+                    }
+                    alt=""
+                    style={{ width: "150px" }}
+                  />
+                  <Cancel
+                    className="shareCancelImg"
+                    onClick={() => setFile(null)}
+                  />
+                  <label style={{ fontSize: "15px" }}>{file.name}</label>
+                </>
+              ) : (
+                ""
+              )}
+            </div>
 
             <div class="chatContentInput">
+              <div class="addFile">
+                <label htmlFor="file" className="shareOption col-3">
+                  <span className="shareOptionText">
+                    <i
+                      class="fas fa-plus-circle fa-lg"
+                      style={{ color: "rgba(77, 104, 193, 1" }}
+                    ></i>
+                  </span>
+                  <input
+                    style={{ display: "none" }}
+                    type="file"
+                    id="file"
+                    accept=".png,.jpeg,.jpg,.zip,.rar"
+                    onChange={(e) => setFile(e.target.files[0])}
+                  />
+                </label>
+              </div>
+
               <input
                 name="input"
                 className="input"
                 onChange={(e) => setNewMessages(e.target.value)}
-                onKeyPress={(e) => (e.key === "Enter" ? handleSubmit(e) : null)}
+                required
+                onKeyPress={(e) =>
+                  e.key === "Enter" && newMessages !== ""
+                    ? handleSubmit(e)
+                    : null
+                }
                 value={newMessages}
                 type="text"
                 placeholder="Type something"

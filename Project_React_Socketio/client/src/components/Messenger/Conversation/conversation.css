@@ -15,6 +15,7 @@
   top: 22px;
   overflow: visible;
   float: left;
+  border-radius: 100px;
 }
 .ItemFriendImg {
   height: 45%;
@@ -35,6 +36,13 @@
 .ItemFriendActive span {
   color: #fff;
 }
+.ItemFriendActive .lassMessage {
+  color: #fff;
+}
+.ItemFriendActive .ID1123_am {
+  color: #fff;
+}
+
 .ItemFriend a:hover {
   background-color: #1fca74;
   text-decoration: none;
@@ -55,7 +63,7 @@
   color: rgba(155, 155, 155, 1);
   float: left;
 }
-.Three {
+.lassMessage {
   text-align: left;
   font-family: AvenirNext-Medium;
   font-style: normal;
@@ -152,4 +160,5 @@
   font-weight: normal;
   font-size: 12px;
   color: #9b9b9b;
+  text-transform: uppercase;
 }

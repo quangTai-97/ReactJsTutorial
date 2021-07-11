@@ -123,11 +123,11 @@
   padding: 12px 0 0 18px;
 }
 
-.buttonSearch {
+/* .buttonSearch {
   position: absolute;
   top: 26px;
   left: 25px;
-}
+} */
 .buttonSearch button {
   background: none;
   border: none;
@@ -177,14 +177,12 @@
   border: none;
   flex: 1;
 }
-.enter {
-  /* position: absolute;
-  top: 14%;
-  left: 76%; */
+/* .enter {
+
   position: relative;
   left: -7%;
   padding-top: 9px;
-}
+} */
 .enter button {
   background: none;
   border: none;

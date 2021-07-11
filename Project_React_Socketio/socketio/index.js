@@ -1,10 +1,10 @@
-const io = require("socket.io")(8990, {
+const io = require("socket.io")(5500, {
   cors: {
     origin: "http://localhost:3000",
   },
 });
 
-let users = [];
+const users = [];
 
 const addUser = (userId, socketId) => {
   !users.some((user) => user.userId === userId) &&
@@ -15,8 +15,10 @@ const removeUser = (socketId) => {
   users = users.filter((u) => u.socketId !== socketId);
 };
 
-const getUser = (userId) => {
-  return users.find((u) => u.userId === userId);
+const getUser = (receiverId) => {
+  const user = users.find((u) => u.userId === receiverId);
+
+  return user;
 };
 
 io.on("connection", (socket) => {
@@ -30,12 +32,12 @@ io.on("connection", (socket) => {
 
   //send and get message
 
-  socket.on("sendMessage", ({ senderId, receiverId, text }) => {
+  socket.on("sendMessage", ({ fileName, senderId, receiverId, text }) => {
     const user = getUser(receiverId);
-    console.log(user);
     io.to(user.socketId).emit("getMessage", {
       senderId,
       text,
+      fileName,
     });
   });
 
@@ -43,6 +45,7 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     console.log("a user disconnected !");
+    console.log("users", users);
     removeUser(socket.id);
     io.emit("getUsers", users);
   });

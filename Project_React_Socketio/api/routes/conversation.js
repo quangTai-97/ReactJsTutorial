@@ -42,6 +42,7 @@ router.get("/:userId", async (req, res) => {
   try {
     const conversation = await Conversation.find({
       members: { $in: [req.params.userId] },
+      status: agreeFriend,
     });
     res.status(200).json(conversation);
   } catch (err) {
@@ -52,10 +53,18 @@ router.get("/:userId", async (req, res) => {
 //DELETE CONVERSATION
 router.delete("/:idConversation", async (req, res) => {
   try {
-    const conversation = await Conversation.findByIdAndRemove(
+    const conversationcheck = await Conversation.findById(
       req.params.idConversation
     );
-    res.status(200).json(conversation);
+
+    if (conversationcheck != null) {
+      const conversation = await Conversation.findByIdAndRemove(
+        req.params.idConversation
+      );
+      res.status(200).json(conversation);
+    } else {
+      res.status(304).json("đã bị xoá");
+    }
   } catch (err) {
     res.status(500).json(err);
   }
@@ -100,11 +109,21 @@ router.get("/getall/:userId", async (req, res) => {
     data.map((c) => {
       if (c._id === req.params.userId) {
         c.output.map((d) => {
-          ids.push({
-            id: d.members.find((x) => x !== req.params.userId),
-            status: d.status,
-            conversationId: d._id,
-          });
+          if (c._id === d.members[0]) {
+            ids.push({
+              id: d.members.find((x) => x !== req.params.userId),
+              status: d.status,
+              conversationId: d._id,
+              button: true,
+            });
+          } else {
+            ids.push({
+              id: d.members.find((x) => x !== req.params.userId),
+              status: d.status,
+              conversationId: d._id,
+              button: false,
+            });
+          }
         });
       }
     });
@@ -115,6 +134,7 @@ router.get("/getall/:userId", async (req, res) => {
         $addFields: {
           status: "",
           conversationId: "",
+          button: false,
         },
       },
       {
@@ -122,6 +142,7 @@ router.get("/getall/:userId", async (req, res) => {
           _id: 1,
           username: 1,
           status: 1,
+          button: 1,
           profilePicture: 1,
           conversationId: 1,
         },
@@ -133,6 +154,7 @@ router.get("/getall/:userId", async (req, res) => {
         if (idId.id === userId._id.toString()) {
           userId.status = idId.status;
           userId.conversationId = idId.conversationId;
+          userId.button = idId.button;
         }
       });
     });
