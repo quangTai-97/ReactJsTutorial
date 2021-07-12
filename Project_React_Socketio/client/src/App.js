@@ -21,7 +21,7 @@ function App() {
       <ToastContainer />
       <Switch>
         <Route exact path="/">
-          {user === null ? <Login /> : <Messenger />}
+          {user === null ? <Login /> : <Redirect to="/messenger" />}
         </Route>
 
         <Route path="/registry" component={Registry} />
@@ -30,7 +30,10 @@ function App() {
           {user ? <Redirect to="/messenger" /> : <Login />}
         </Route>
 
-        <Route path="/messenger/:idConversation?" component={Messenger} />
+        <Route path="/messenger/:idConversation?">
+        {user === null ? <Login /> : <Messenger />}
+        </Route>
+
       </Switch>
     </Router>
   );

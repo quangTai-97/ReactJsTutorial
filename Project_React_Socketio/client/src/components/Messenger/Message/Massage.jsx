@@ -9,17 +9,8 @@ export default function Message({ message, own }) {
   const [viewMessage, setViewMessage] = useState();
   const [user, setUser] = useState({});
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-  useEffect(() => {
-    const getUser = async () => {
-      try {
-        const res = await axios.get("/users/" + message.sender);
-        setUser(res.data);
-      } catch (error) {
-        console.log("error Message:", error);
-      }
-    };
-    getUser();
-  }, [message]);
+
+
   useEffect(() => {
     if (message.fileName !== "" && message.text !== "") {
       if (message.fileName.includes(".zip")) {
@@ -72,8 +63,8 @@ export default function Message({ message, own }) {
             <img
               class="messageImg"
               src={
-                user.profilePicture !== ""
-                  ? PF + user.profilePicture
+                message.User[0].profilePicture !== ""
+                  ? PF + message.User[0].profilePicture
                   : PF + "person/noAvatar.png"
               }
               alt=""
@@ -94,8 +85,8 @@ export default function Message({ message, own }) {
             <img
               class="messageImg"
               src={
-                user.profilePicture !== ""
-                  ? PF + user.profilePicture
+                message.User[0].profilePicture !== ""
+                  ? PF + message.User[0].profilePicture
                   : PF + "person/noAvatar.png"
               }
               alt=""
