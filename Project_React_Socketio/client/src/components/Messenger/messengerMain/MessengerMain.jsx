@@ -37,7 +37,7 @@ export default function MessengerMain() {
         //createdAt: Date.now(),
       //});
         if (data) {
-        const data1213 = async () => {
+        const dataAddUser = async () => {
           const user = await axios.get("/users/" + data.senderId);
 
           setArrivalMessages({
@@ -48,7 +48,7 @@ export default function MessengerMain() {
             User: [user.data],
           });
         };
-        data1213();
+        dataAddUser();
       }
     });
   }, []);
