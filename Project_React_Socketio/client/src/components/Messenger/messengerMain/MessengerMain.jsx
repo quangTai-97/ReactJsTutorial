@@ -30,12 +30,26 @@ export default function MessengerMain() {
   useEffect(() => {
     socket.current = io("ws://localhost:5500");
     socket.current.on("getMessage", (data) => {
-      setArrivalMessages({
-        fileName: data.fileName,
-        sender: data.senderId,
-        text: data.text,
-        createdAt: Date.now(),
-      });
+      //setArrivalMessages({
+        //fileName: data.fileName,
+        //sender: data.senderId,
+        //text: data.text,
+        //createdAt: Date.now(),
+      //});
+        if (data) {
+        const data1213 = async () => {
+          const user = await axios.get("/users/" + data.senderId);
+
+          setArrivalMessages({
+            fileName: data.fileName,
+            sender: data.senderId,
+            text: data.text,
+            createdAt: Date.now(),
+            User: [user.data],
+          });
+        };
+        data1213();
+      }
     });
   }, []);
 
