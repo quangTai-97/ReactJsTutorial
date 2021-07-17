@@ -2,8 +2,8 @@ import "./../../../pages/messenger/messenger.css";
 import { AuthContext } from "./../../../context/AuthContext";
 import { useContext, useEffect, useState, useRef, React } from "react";
 import Conversation from "./../Conversation/Conversation";
-import Message from "./../message/Massage";
-import ChatBoxHeader from "./../chatBoxHeader/ChatBoxHeader";
+import Message from "./../Message/Massage";
+import ChatBoxHeader from "./../ChatBoxHeader/ChatBoxHeader";
 import axios from "axios";
 import io from "socket.io-client";
 import { useLocation } from "react-router";
@@ -30,12 +30,26 @@ export default function MessengerMain() {
   useEffect(() => {
     socket.current = io("ws://localhost:5500");
     socket.current.on("getMessage", (data) => {
-      setArrivalMessages({
-        fileName: data.fileName,
-        sender: data.senderId,
-        text: data.text,
-        createdAt: Date.now(),
-      });
+      //setArrivalMessages({
+        //fileName: data.fileName,
+        //sender: data.senderId,
+        //text: data.text,
+        //createdAt: Date.now(),
+      //});
+        if (data) {
+        const dataAddUser = async () => {
+          const user = await axios.get("/users/" + data.senderId);
+
+          setArrivalMessages({
+            fileName: data.fileName,
+            sender: data.senderId,
+            text: data.text,
+            createdAt: Date.now(),
+            User: [user.data],
+          });
+        };
+        dataAddUser();
+      }
     });
   }, []);
 
